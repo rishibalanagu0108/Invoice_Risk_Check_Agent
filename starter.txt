@@ -1,0 +1,995 @@
+You are helping me complete my Week 1 AI-Native Project.
+
+Your job is to build and organize the complete technical project, experiment framework, documentation structure, and IJCAI-style preprint scaffolding for an:
+
+# Invoice / Payment Risk Agent
+
+Do NOT fabricate human discussions, Reddit replies, X replies, experiment results, citations, sources, or evidence.
+
+If human input, external research, or an actual experiment is required, create a clearly marked placeholder/TODO and tell me exactly what I need to provide.
+
+Never claim that something was tested unless the test was actually executed.
+
+Never invent a citation.
+
+Never invent probabilities and present them as empirically established facts. Initial probabilities or costs may be used as explicitly labeled assumptions for simulation, but they must be clearly marked as assumptions and configurable.
+
+---
+
+# 1. PROJECT OBJECTIVE
+
+Build a small, testable AI agent that evaluates vendor invoices/payment requests under uncertainty.
+
+The agent observes available information about:
+
+* invoice
+* vendor
+* amount
+* bank/payment details
+* historical invoices
+* historical payment information
+* vendor identity information
+* email/domain information where available
+* other relevant evidence
+
+The true state is not directly observable when the decision is made.
+
+Initial hidden states:
+
+H1 = Legitimate
+H2 = Error / anomaly
+H3 = Fraud
+
+The agent must select one of these actions:
+
+* APPROVE
+* VERIFY
+* HOLD
+* ESCALATE
+
+The system must explicitly model:
+
+1. Input
+2. Evidence
+3. Hidden states
+4. Beliefs/probabilities
+5. Actions
+6. Costs
+7. Policy
+8. Feedback
+9. Belief update after new evidence
+
+The system must make an ACTION, not merely produce a chatbot explanation.
+
+---
+
+# 2. IMPORTANT PROJECT PRINCIPLES
+
+Keep the implementation SMALL and understandable.
+
+I am learning AI engineering, probability and agent design, so prefer clarity over unnecessary complexity.
+
+Use Python unless there is a strong reason otherwise.
+
+A notebook or simple Python application is acceptable.
+
+Separate:
+
+* data
+* agent logic
+* policies
+* experiments
+* metrics
+* results
+* documentation
+
+Do not overengineer this into microservices.
+
+Make every important assumption configurable.
+
+Use deterministic/reproducible experiments where possible.
+
+Set random seeds for simulations.
+
+---
+
+# 3. CREATE THIS REPOSITORY STRUCTURE
+
+Create:
+
+week1/
+└── deliverables/
+└── student-project/
+├── README.md
+├── research-file.md
+├── discussion-record.md
+├── review-record.md
+├── requirements.txt or pyproject.toml
+├── paper/
+│   ├── main.tex
+│   ├── references.bib
+│   ├── figures/
+│   └── preprint.pdf
+├── src/
+├── data/
+├── experiments/
+├── results/
+├── decisions/
+│   └── probability-decision-record.md
+└── social/
+├── linkedin-post.md
+└── x-thread.md
+
+You may add sensible files underneath these directories.
+
+---
+
+# 4. RESEARCH FILE
+
+Create research-file.md.
+
+Include clearly separated sections for:
+
+* Problem statement
+* Project objective
+* Current assumptions
+* Technical terms
+* Search queries
+* Verified Reddit communities
+* Relevant X accounts
+* Papers/articles/repositories/datasets
+* Research questions
+* AI prompts used
+* AI mistakes/issues
+* Claims requiring evidence
+* Open questions
+
+DO NOT invent Reddit communities, X accounts, papers or references as verified information.
+
+Where I haven't provided verified information, write TODO markers.
+
+Current problem statement:
+
+"The agent observes an invoice, vendor information, payment details and available history. It must approve, verify, hold or escalate the payment because the legitimacy and risk of the payment are not fully known."
+
+---
+
+# 5. DISCUSSION RECORD
+
+Create discussion-record.md with:
+
+| Platform | Community or account | Link | My first contribution | Human answer | My next answer | Design change |
+| -------- | -------------------- | ---- | --------------------- | ------------ | -------------- | ------------- |
+
+Also support these outcomes:
+
+* New assumption
+* New failure condition
+* New test
+* Agent change
+* Probability-model change
+* No change, with reason
+
+Do not fabricate discussions.
+
+Leave clean placeholders for me to paste actual Reddit/X interactions.
+
+Include a progress tracker for:
+
+Reddit:
+
+* 5–10 communities
+* minimum 2 contributions/community
+* minimum 10 contributions total
+* at least 5 discussions with 2+ replies
+
+X:
+
+* 15–25 relevant accounts
+* 3–4 useful comments/day
+* target 21–28 comments over 7 days
+* at least 3 discussions with 2+ replies
+
+---
+
+# 6. AGENT DATA MODEL
+
+Design a clear representation for each invoice case.
+
+Possible features may include:
+
+* vendor_id
+* vendor_age_days
+* existing_vendor
+* invoice_amount
+* historical_average_amount
+* amount_deviation
+* bank_account_changed
+* bank_change_age
+* email_domain_changed
+* lookalike_domain_signal
+* invoice_number_pattern_valid
+* duplicate_invoice_signal
+* purchase_order_match
+* payment_terms_match
+* unusual_urgency
+* country_or_location_change
+* vendor_contact_verified
+* callback_verified
+* prior_payment_history
+* supporting_documents_available
+
+Do NOT assume all of these must remain.
+
+Make the feature system extensible because Reddit/X feedback may add/remove evidence.
+
+Explain each feature.
+
+---
+
+# 7. HIDDEN STATES
+
+Implement:
+
+LEGITIMATE
+ERROR
+FRAUD
+
+Explain that the correct hidden state exists in labeled/simulated experimental cases but is hidden from the agent when it makes its decision.
+
+---
+
+# 8. BELIEF MODEL
+
+Implement a simple and explainable Version-1 belief model.
+
+The model must output probabilities:
+
+P(Legitimate)
+P(Error)
+P(Fraud)
+
+They must always sum to 1.
+
+Do not use arbitrary unexplained magic numbers.
+
+Put weights/priors in a configuration file.
+
+Clearly label initial weights/priors as simulation assumptions unless supported by evidence.
+
+Create functions that:
+
+1. calculate prior belief
+2. incorporate observed evidence
+3. normalize probabilities
+4. return the three-state probability distribution
+
+Prefer an interpretable approach.
+
+Possible options:
+
+* weighted evidence model
+* likelihood-based Bayesian-style update
+* simple probabilistic scoring
+
+Choose the simplest method that supports the experiment.
+
+Document all formulas.
+
+---
+
+# 9. ACTION COST MODEL
+
+Create a configurable cost matrix.
+
+Actions:
+
+APPROVE
+VERIFY
+HOLD
+ESCALATE
+
+Hidden states:
+
+LEGITIMATE
+ERROR
+FRAUD
+
+Represent the cost of each action/state combination.
+
+Example reasoning:
+
+* approving fraud = potentially very high cost
+* holding legitimate payment = delay/operational cost
+* verifying legitimate payment = small verification cost
+* escalating everything = high human-review cost
+
+Do NOT treat example costs as real financial estimates.
+
+Clearly label them as normalized experimental costs.
+
+Make them configurable.
+
+---
+
+# 10. TWO AGENT POLICIES
+
+Implement at least two distinct policies.
+
+Policy A:
+A relatively permissive/efficiency-oriented policy.
+
+Policy B:
+A relatively cautious/risk-sensitive policy.
+
+Policies should use beliefs, costs and configurable thresholds.
+
+For each policy explain:
+
+* decision rule
+* thresholds
+* rationale
+* trade-offs
+
+Avoid hardcoding unexplained thresholds throughout the code.
+
+Keep thresholds in configuration.
+
+---
+
+# 11. BASELINE
+
+Implement at least one simple baseline.
+
+Example approach:
+
+A deterministic rule-based baseline such as:
+
+* bank details changed -> VERIFY
+* obvious duplicate -> HOLD
+* otherwise -> APPROVE
+
+This is only an example.
+
+Design a reasonable simple baseline that is clearly less sophisticated than the belief-based policies.
+
+Document it.
+
+---
+
+# 12. TEST DATA
+
+Create infrastructure for 30–50 labeled or simulated cases.
+
+Generate exactly 40 cases initially unless there is a strong reason to choose another number.
+
+Ensure variety across:
+
+* legitimate cases
+* innocent errors/anomalies
+* fraud cases
+* easy cases
+* ambiguous cases
+* high-value cases
+* low-value cases
+* bank changes
+* domain changes
+* unusual amount
+* duplicate invoice
+* vendor history variations
+* independent verification results
+
+The hidden-state label must NOT be passed to the agent during prediction.
+
+Store test cases in data/.
+
+Document which cases are simulated.
+
+Do not present simulated cases as real-world fraud incidents.
+
+Create a clear schema/data dictionary.
+
+---
+
+# 13. EXPERIMENT
+
+Create a reproducible experiment runner.
+
+For every case run:
+
+1. Baseline
+2. Policy A
+3. Policy B
+
+Store:
+
+* case ID
+* evidence
+* true hidden state
+* beliefs
+* action
+* whether action was appropriate
+* expected/decision cost
+* whether human review was required
+* policy
+* relevant explanation
+
+Save machine-readable results to results/.
+
+Also produce human-readable summary tables.
+
+---
+
+# 14. METRICS
+
+Do NOT use accuracy alone.
+
+Calculate applicable metrics such as:
+
+* confusion matrix
+* fraud precision
+* fraud recall
+* false-positive count
+* false-negative count
+* human-review rate
+* approval rate
+* verification rate
+* hold rate
+* escalation rate
+* total decision cost
+* average decision cost
+
+If meaningful, include probability calibration such as Brier score or calibration analysis.
+
+Explain why every metric matters for payment-risk decisions.
+
+---
+
+# 15. FAILURE ANALYSIS
+
+Automatically identify at least five incorrect or high-cost decisions from actual experiment output.
+
+Do NOT fabricate failures before the experiment runs.
+
+Create a failure-analysis output.
+
+For each selected failure include:
+
+* case ID
+* true hidden state
+* evidence
+* beliefs
+* action
+* expected action or problem
+* failure-condition name
+* why it happened
+* cost
+* possible improvement
+
+Identify which observed error produced the highest cost in the experiment.
+
+---
+
+# 16. PROBABILITY DECISION RECORD
+
+Create:
+
+decisions/probability-decision-record.md
+
+Use one actual experimental case where uncertainty is meaningful.
+
+The record must contain:
+
+| Item          | Required information                     |
+| ------------- | ---------------------------------------- |
+| Evidence      | Information observed                     |
+| Hidden states | Possible explanations                    |
+| Beliefs       | Probability of each                      |
+| Event         | Hidden state/event important to decision |
+| Actions       | Available actions                        |
+| Costs         | Results of actions                       |
+| Policy        | Rule and threshold                       |
+| Decision      | Selected action and reason               |
+| Audit data    | Time/data/model/policy version           |
+
+The hidden-state probabilities must sum to 100%.
+
+Then support adding one new item of evidence and record:
+
+1. prior probability
+2. new evidence
+3. likelihood for each important hidden state
+4. posterior probability
+5. threshold comparison
+6. new action
+
+Do not fabricate real-world likelihood statistics.
+
+Clearly identify modeled/simulated likelihoods.
+
+---
+
+# 17. FEEDBACK LOOP
+
+Implement the idea that an action such as VERIFY can produce new evidence.
+
+Example:
+
+VERIFY
+-> independent callback
+-> vendor confirms or denies bank-account change
+-> beliefs update
+-> policy chooses next action
+
+Support this in code for simulated experiments.
+
+Keep initial decision and post-feedback decision separately.
+
+---
+
+# 18. HUMAN REASONING FUNCTION
+
+The assignment requires at least one useful human-reasoning-like function.
+
+Implement at least one clearly:
+
+"Identify uncertainty and request/collect more evidence before making a high-cost decision."
+
+Optionally also support:
+
+* compare with previous vendor behavior
+* remember prior anomalies
+* escalate high-cost decisions to human
+
+Explain exactly which function satisfies this requirement.
+
+---
+
+# 19. REVIEW RECORD
+
+Create review-record.md:
+
+| AI tool | Review comment | Accept or reject | Reason | Change | Evidence |
+| ------- | -------------- | ---------------- | ------ | ------ | -------- |
+
+Create three sections/templates:
+
+1. Practitioner Review
+2. Probability Review
+3. Preprint Review
+
+Provide prompts I can use with ChatGPT/Claude/Gemini.
+
+Do NOT fabricate completed review responses.
+
+Leave TODO entries until real reviews are performed.
+
+---
+
+# 20. PRACTITIONER REVIEW PROMPT
+
+Prepare a prompt asking an AI reviewer to inspect:
+
+* unrealistic assumptions
+* missing stakeholders
+* deployment risks
+* harmful actions
+* unnecessary work
+* payment-control weaknesses
+* human-review requirements
+
+---
+
+# 21. PROBABILITY REVIEW PROMPT
+
+Prepare a prompt asking an AI reviewer to inspect:
+
+* hidden states
+* priors
+* likelihood assumptions
+* thresholds
+* costs
+* calibration
+* alternative explanations
+* sensitivity to assumptions
+
+---
+
+# 22. PREPRINT REVIEW PROMPT
+
+Prepare a prompt asking an AI reviewer to inspect:
+
+* problem clarity
+* novelty/new information
+* methodology
+* experiment design
+* baseline
+* reproducibility
+* limitations
+* ethics
+* unsupported claims
+* citation issues
+* unanswered questions
+
+---
+
+# 23. README
+
+Create a complete README with:
+
+* project description
+* objective
+* agent overview
+* architecture
+* repository structure
+* setup
+* installation
+* how to run experiments
+* how to regenerate results
+* how to generate figures
+* how to run tests
+* how to compile paper
+* assumptions
+* limitations
+* AI-use statement
+* human-discussion status
+* reproducibility instructions
+
+Commands must actually correspond to the code created.
+
+---
+
+# 24. TESTING
+
+Create automated tests for important logic:
+
+* beliefs sum to 1
+* valid actions only
+* policy thresholds work
+* hidden label is not used in prediction
+* risk signals affect beliefs as intended
+* feedback updates beliefs
+* experiment runner saves output
+* metrics calculate correctly
+
+Run the tests.
+
+Fix failures.
+
+Do not claim tests passed unless they actually passed.
+
+---
+
+# 25. FIGURES
+
+Generate useful figures based only on actual experiment results.
+
+Potential figures:
+
+* policy comparison
+* confusion matrix
+* decision-cost comparison
+* action distribution
+* human-review rate
+* calibration curve if appropriate
+
+Save under paper/figures/.
+
+Do not generate fake charts before experiment data exists.
+
+---
+
+# 26. IJCAI-STYLE PREPRINT
+
+Create paper/main.tex and paper/references.bib.
+
+The paper must use the CURRENT IJCAI author-kit structure/style if it is available locally.
+
+If it is not available, do not pretend it is.
+
+Create a clear TODO telling me that the official current IJCAI author kit must be downloaded/verified before final submission.
+
+Use these paper sections:
+
+1. Title
+2. Abstract
+3. Introduction
+4. Related Work and User Discussions
+5. Agent Design
+6. Probability Model and Decision Rule
+7. Test Method
+8. Results
+9. Failure Analysis
+10. Limitations, Ethics, and Human Control
+11. Conclusion and New Questions
+12. References
+
+The preprint must eventually include:
+
+* one specific problem
+* agent input
+* hidden states
+* beliefs
+* actions
+* error costs
+* baseline
+* test/simulation
+* result table or figure
+* failure examples
+* information from real human discussions
+* limitations
+* project/code link when available
+* AI-use statement
+
+Never claim IJCAI accepted or reviewed this work.
+
+Never claim it was submitted to IJCAI unless I explicitly say that happened.
+
+Clearly call it an "IJCAI-style course preprint" where appropriate.
+
+---
+
+# 27. REFERENCES
+
+Do NOT invent bibliography entries.
+
+Create placeholders for references that need to be researched/verified.
+
+Every final reference must be actually read and verified before inclusion.
+
+Add a citation-verification checklist.
+
+---
+
+# 28. ETHICS AND HUMAN CONTROL
+
+Explicitly discuss:
+
+* false approval of fraudulent payments
+* false holds on legitimate vendors
+* automation bias
+* explainability
+* human escalation
+* privacy of invoice/vendor information
+* consequences of using synthetic data
+* limitations of simulated probabilities
+* why the agent should not autonomously release real payments without proper controls
+
+---
+
+# 29. AI USE STATEMENT
+
+Create an honest AI-use statement explaining that AI tools assisted with:
+
+* research preparation
+* software development
+* debugging
+* experiment tooling
+* LaTeX preparation
+* review assistance
+
+Also state that:
+
+* human discussions must be genuine
+* citations must be manually verified
+* experiment claims must come from executed tests
+* the student remains responsible for the content
+
+---
+
+# 30. SOCIAL FILES
+
+Create:
+
+social/linkedin-post.md
+social/x-thread.md
+
+Do NOT write final claims/results until experiments are actually run.
+
+Create structured placeholders for:
+
+LinkedIn:
+
+* problem in one sentence
+* reason for agent design
+* reason for probability model
+* one important result/failure
+* one design change from public discussion
+* largest limitation
+* specific request for comments
+
+X thread:
+
+* problem
+* method/test
+* result
+* open question
+
+Mark unavailable claims as TODO.
+
+---
+
+# 31. COMPLETION CHECKLIST
+
+Create a checklist covering ALL of these requirements:
+
+* same problem used throughout
+* research-file.md exists
+* 5–10 verified Reddit communities
+* 2 contributions/community
+* 5 completed Reddit discussions
+* 15–25 relevant X accounts
+* 3–4 X comments/day
+* 3 completed X discussions
+* testable agent
+* 30–50 cases
+* 2 agent policies
+* 1 baseline
+* at least 5 incorrect decisions examined
+* probability decision record
+* 3 AI reviews
+* accepted/rejected review comments recorded
+* IJCAI-style LaTeX preprint
+* PDF successfully compiled
+* LinkedIn post
+* X thread
+* AI-use statement
+* human contribution statement
+* limitations
+* reproducible test instructions
+* citation verification
+
+Automatically determine which items can be marked complete from the repository.
+
+Leave anything requiring real human/external action unchecked.
+
+---
+
+# 32. QUALITY RULES
+
+Do not hide complexity behind vague code.
+
+Use readable names.
+
+Add comments only where they add value.
+
+Keep functions reasonably small.
+
+Use type hints.
+
+Use deterministic test data where practical.
+
+Avoid unnecessary frameworks.
+
+Separate configuration from logic.
+
+Do not put secrets/API keys into the repository.
+
+Create .gitignore where appropriate.
+
+Create .env.example only if necessary.
+
+---
+
+# 33. EXECUTION ORDER
+
+Work in this order:
+
+Phase 1:
+Inspect existing repository and preserve useful existing work.
+
+Phase 2:
+Create missing directory structure and documentation templates.
+
+Phase 3:
+Implement data model, evidence model and hidden states.
+
+Phase 4:
+Implement belief model.
+
+Phase 5:
+Implement cost model.
+
+Phase 6:
+Implement Baseline, Policy A and Policy B.
+
+Phase 7:
+Create simulated/labeled test cases.
+
+Phase 8:
+Implement experiment runner.
+
+Phase 9:
+Run experiments.
+
+Phase 10:
+Calculate metrics.
+
+Phase 11:
+Generate failure analysis.
+
+Phase 12:
+Generate probability decision record from a suitable experiment case.
+
+Phase 13:
+Create figures.
+
+Phase 14:
+Run automated tests and fix failures.
+
+Phase 15:
+Populate README using only verified project facts.
+
+Phase 16:
+Prepare research/discussion/review templates.
+
+Phase 17:
+Create LaTeX preprint using actual available experiment results while leaving human-discussion/citation TODOs where evidence is still missing.
+
+Phase 18:
+Attempt to compile LaTeX if the environment supports it.
+
+Phase 19:
+Prepare social-post templates without inventing missing results.
+
+Phase 20:
+Perform final requirement audit.
+
+---
+
+# 34. FINAL AUDIT
+
+Before finishing, inspect every requirement above.
+
+Create:
+
+PROJECT_STATUS.md
+
+It must contain:
+
+## Completed automatically
+
+Everything actually completed and verified.
+
+## Requires my action
+
+Examples:
+
+* Reddit contributions/replies
+* X contributions/replies
+* citation reading/verification
+* instructor approval if needed
+* AI review responses
+* final human interpretation
+* publishing
+* any unavailable IJCAI author kit
+
+## Missing or blocked
+
+Anything Codex could not complete and the exact reason.
+
+## Commands to run
+
+Exact commands for:
+
+* environment setup
+* tests
+* experiment
+* metrics
+* figures
+* paper compilation
+
+Do not tell me the assignment is complete if human-required tasks remain.
+
+At the end, give me a concise summary containing:
+
+1. Files created/modified
+2. Agent design
+3. Experiment design
+4. Tests run and actual status
+5. Experiment results actually obtained
+6. Remaining human tasks
+7. Any assumptions that still require evidence
+8. The next action I should personally perform
+
+Start by inspecting the current repository. Do not overwrite existing useful files without checking them first.
