@@ -46,5 +46,23 @@
       "false": {"LEGITIMATE": 0.05, "ERROR": 0.25, "FRAUD": 0.9},
       "null": {"LEGITIMATE": 1.0, "ERROR": 1.0, "FRAUD": 1.0}
     }
+  },
+  "costs": {
+    "APPROVE": {"LEGITIMATE": 0, "ERROR": 25, "FRAUD": 100},
+    "VERIFY": {"LEGITIMATE": 5, "ERROR": 8, "FRAUD": 10},
+    "HOLD": {"LEGITIMATE": 15, "ERROR": 8, "FRAUD": 5},
+    "ESCALATE": {"LEGITIMATE": 10, "ERROR": 10, "FRAUD": 8}
+  },
+  "policies": {
+    "efficiency": {
+      "verify_fraud_probability": 0.3,
+      "hold_fraud_probability": 0.6,
+      "escalate_fraud_probability": 0.85
+    },
+    "risk_sensitive": {
+      "verify_fraud_probability": 0.15,
+      "hold_fraud_probability": 0.4,
+      "escalate_fraud_probability": 0.7
+    }
   }
 }

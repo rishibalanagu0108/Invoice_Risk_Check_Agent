@@ -55,16 +55,20 @@ Completed:
   hidden evaluation label.
 - Added configurable priors and evidence likelihoods.
 - Added Bayesian-style belief updates with normalization and evidence tests.
+- Added normalized action/state costs and expected-cost calculations.
+- Added the rule-based baseline plus efficiency and risk-sensitive policies.
+- Verified that policy thresholds create distinct approval behavior while costs
+  select among safer actions.
 
 Not completed:
 
 - Probability model and configurable assumptions.
-- Cost-sensitive decision policies and baseline.
+- Synthetic 40-case dataset.
 - Configuration file for priors, likelihoods, costs, and thresholds.
 - Synthetic 40-case dataset.
 - Experiment runner and result files.
 - Metrics, failure analysis, and figures.
-- Additional automated tests for policies, feedback,
+- Additional automated tests for feedback,
   experiments, and metrics.
 - README and research documentation.
 - IJCAI-style preprint.
@@ -76,7 +80,7 @@ Verification note:
 - `python3 -m invoice_agent` succeeds with `PYTHONPATH=src`.
 - Python source compilation succeeds.
 - The virtual environment contains the development dependencies.
-- `python -m pytest` passes: 11 tests passed.
+- `python -m pytest` passes: 15 tests passed.
 
 ## Core architecture
 
@@ -132,8 +136,7 @@ experiment.
 
 ## Immediate next action
 
-Implement the cost matrix, expected-cost calculation, baseline, Policy A, and
-Policy B.
+Generate the reproducible 40-case synthetic dataset and document its schema.
 
 ## Expected future top-level structure
 
