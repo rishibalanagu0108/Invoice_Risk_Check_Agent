@@ -47,6 +47,9 @@ Completed:
 - Defined a configurable normalized cost matrix.
 - Defined a simple baseline and two belief-based policies.
 - Defined the verification feedback loop.
+- Scaffolded the Python package and project directories.
+- Added `pyproject.toml` with the project metadata and pytest configuration.
+- Added a package entry point and a minimal scaffold import test.
 
 Not completed:
 
@@ -60,6 +63,13 @@ Not completed:
 - IJCAI-style preprint.
 - Genuine Reddit/X discussions and AI reviews.
 - Verified references.
+
+Verification note:
+
+- `python3 -m invoice_agent` succeeds with `PYTHONPATH=src`.
+- Python source compilation succeeds.
+- `pytest` is not installed in the current environment, so the test suite has
+  not yet been executed.
 
 ## Core architecture
 
@@ -115,8 +125,8 @@ experiment.
 
 ## Immediate next action
 
-Implement the project skeleton and configuration layer, then add the belief
-model with unit tests before generating the 40 cases.
+Install development dependencies, then implement the domain data model and
+configuration layer before adding the belief model.
 
 ## Expected future top-level structure
 
