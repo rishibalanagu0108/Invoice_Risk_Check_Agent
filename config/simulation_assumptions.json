@@ -1,0 +1,50 @@
+{
+  "priors": {
+    "LEGITIMATE": 0.6,
+    "ERROR": 0.25,
+    "FRAUD": 0.15
+  },
+  "likelihoods": {
+    "bank_account_changed": {
+      "true": {"LEGITIMATE": 0.1, "ERROR": 0.35, "FRAUD": 0.8},
+      "false": {"LEGITIMATE": 0.9, "ERROR": 0.65, "FRAUD": 0.2}
+    },
+    "email_domain_changed": {
+      "true": {"LEGITIMATE": 0.15, "ERROR": 0.3, "FRAUD": 0.7},
+      "false": {"LEGITIMATE": 0.85, "ERROR": 0.7, "FRAUD": 0.3}
+    },
+    "lookalike_domain_signal": {
+      "true": {"LEGITIMATE": 0.03, "ERROR": 0.07, "FRAUD": 0.65},
+      "false": {"LEGITIMATE": 0.97, "ERROR": 0.93, "FRAUD": 0.35}
+    },
+    "duplicate_invoice_signal": {
+      "true": {"LEGITIMATE": 0.03, "ERROR": 0.6, "FRAUD": 0.35},
+      "false": {"LEGITIMATE": 0.97, "ERROR": 0.4, "FRAUD": 0.65}
+    },
+    "unusual_urgency": {
+      "true": {"LEGITIMATE": 0.1, "ERROR": 0.25, "FRAUD": 0.6},
+      "false": {"LEGITIMATE": 0.9, "ERROR": 0.75, "FRAUD": 0.4}
+    },
+    "location_changed": {
+      "true": {"LEGITIMATE": 0.08, "ERROR": 0.3, "FRAUD": 0.5},
+      "false": {"LEGITIMATE": 0.92, "ERROR": 0.7, "FRAUD": 0.5}
+    },
+    "purchase_order_match": {
+      "true": {"LEGITIMATE": 0.9, "ERROR": 0.55, "FRAUD": 0.2},
+      "false": {"LEGITIMATE": 0.1, "ERROR": 0.45, "FRAUD": 0.8}
+    },
+    "payment_terms_match": {
+      "true": {"LEGITIMATE": 0.9, "ERROR": 0.6, "FRAUD": 0.25},
+      "false": {"LEGITIMATE": 0.1, "ERROR": 0.4, "FRAUD": 0.75}
+    },
+    "vendor_contact_verified": {
+      "true": {"LEGITIMATE": 0.85, "ERROR": 0.55, "FRAUD": 0.15},
+      "false": {"LEGITIMATE": 0.15, "ERROR": 0.45, "FRAUD": 0.85}
+    },
+    "callback_verified": {
+      "true": {"LEGITIMATE": 0.85, "ERROR": 0.6, "FRAUD": 0.1},
+      "false": {"LEGITIMATE": 0.05, "ERROR": 0.25, "FRAUD": 0.9},
+      "null": {"LEGITIMATE": 1.0, "ERROR": 1.0, "FRAUD": 1.0}
+    }
+  }
+}

@@ -53,15 +53,18 @@ Completed:
 - Added typed invoice cases, hidden states, and allowed actions.
 - Added validation and a prediction-time observation view that excludes the
   hidden evaluation label.
+- Added configurable priors and evidence likelihoods.
+- Added Bayesian-style belief updates with normalization and evidence tests.
 
 Not completed:
 
 - Probability model and configurable assumptions.
+- Cost-sensitive decision policies and baseline.
 - Configuration file for priors, likelihoods, costs, and thresholds.
 - Synthetic 40-case dataset.
 - Experiment runner and result files.
 - Metrics, failure analysis, and figures.
-- Additional automated tests for the probability model, policies, feedback,
+- Additional automated tests for policies, feedback,
   experiments, and metrics.
 - README and research documentation.
 - IJCAI-style preprint.
@@ -73,7 +76,7 @@ Verification note:
 - `python3 -m invoice_agent` succeeds with `PYTHONPATH=src`.
 - Python source compilation succeeds.
 - The virtual environment contains the development dependencies.
-- `python -m pytest` passes: 6 tests passed.
+- `python -m pytest` passes: 11 tests passed.
 
 ## Core architecture
 
@@ -129,8 +132,8 @@ experiment.
 
 ## Immediate next action
 
-Implement the configurable priors and likelihood-based belief model, with
-tests for normalization and evidence updates.
+Implement the cost matrix, expected-cost calculation, baseline, Policy A, and
+Policy B.
 
 ## Expected future top-level structure
 
