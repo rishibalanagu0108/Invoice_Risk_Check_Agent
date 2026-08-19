@@ -50,15 +50,19 @@ Completed:
 - Scaffolded the Python package and project directories.
 - Added `pyproject.toml` with the project metadata and pytest configuration.
 - Added a package entry point and a minimal scaffold import test.
+- Added typed invoice cases, hidden states, and allowed actions.
+- Added validation and a prediction-time observation view that excludes the
+  hidden evaluation label.
 
 Not completed:
 
-- Python package and source code.
+- Probability model and configurable assumptions.
 - Configuration file for priors, likelihoods, costs, and thresholds.
 - Synthetic 40-case dataset.
 - Experiment runner and result files.
 - Metrics, failure analysis, and figures.
-- Automated tests.
+- Additional automated tests for the probability model, policies, feedback,
+  experiments, and metrics.
 - README and research documentation.
 - IJCAI-style preprint.
 - Genuine Reddit/X discussions and AI reviews.
@@ -68,8 +72,8 @@ Verification note:
 
 - `python3 -m invoice_agent` succeeds with `PYTHONPATH=src`.
 - Python source compilation succeeds.
-- `pytest` is not installed in the current environment, so the test suite has
-  not yet been executed.
+- The virtual environment contains the development dependencies.
+- `python -m pytest` passes: 6 tests passed.
 
 ## Core architecture
 
@@ -125,8 +129,8 @@ experiment.
 
 ## Immediate next action
 
-Install development dependencies, then implement the domain data model and
-configuration layer before adding the belief model.
+Implement the configurable priors and likelihood-based belief model, with
+tests for normalization and evidence updates.
 
 ## Expected future top-level structure
 
