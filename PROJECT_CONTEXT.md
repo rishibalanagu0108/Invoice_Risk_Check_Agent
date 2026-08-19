@@ -59,11 +59,15 @@ Completed:
 - Added the rule-based baseline plus efficiency and risk-sensitive policies.
 - Verified that policy thresholds create distinct approval behavior while costs
   select among safer actions.
+- Added a seeded generator for exactly 40 varied synthetic cases.
+- Saved canonical `data/cases.csv` with 16 legitimate, 12 error, and 12 fraud
+  cases.
+- Added CSV type conversion and round-trip validation.
 
 Not completed:
 
 - Probability model and configurable assumptions.
-- Synthetic 40-case dataset.
+- Experiment runner and result files.
 - Configuration file for priors, likelihoods, costs, and thresholds.
 - Synthetic 40-case dataset.
 - Experiment runner and result files.
@@ -80,7 +84,7 @@ Verification note:
 - `python3 -m invoice_agent` succeeds with `PYTHONPATH=src`.
 - Python source compilation succeeds.
 - The virtual environment contains the development dependencies.
-- `python -m pytest` passes: 15 tests passed.
+- `python -m pytest` passes: 20 tests passed.
 
 ## Core architecture
 
@@ -136,7 +140,8 @@ experiment.
 
 ## Immediate next action
 
-Generate the reproducible 40-case synthetic dataset and document its schema.
+Implement the experiment runner that evaluates the baseline, Policy A, and
+Policy B against `data/cases.csv`.
 
 ## Expected future top-level structure
 
