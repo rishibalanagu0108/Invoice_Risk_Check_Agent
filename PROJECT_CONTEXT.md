@@ -82,11 +82,12 @@ Completed:
 - Re-ran the experiment, metrics, and failure analysis after the revision.
 - Added a reproducible probability decision record for `case-006`, showing
   VERIFY before callback evidence and HOLD after a negative callback.
+- Added README, research, discussion, review, social-template, and completion
+  checklist documentation with unsupported claims marked TODO.
 
 Not completed:
 
 - Figures.
-- README and research documentation.
 - IJCAI-style preprint.
 - Genuine Reddit/X discussions and AI reviews.
 - Verified references.
@@ -174,8 +175,8 @@ experiment.
 
 ## Immediate next action
 
-Create the probability decision record using one meaningful case and document
-the prior-to-posterior update after new evidence.
+Create the IJCAI-style course preprint scaffold and verify whether the current
+official IJCAI author kit is available locally.
 
 ## Expected future top-level structure
 
