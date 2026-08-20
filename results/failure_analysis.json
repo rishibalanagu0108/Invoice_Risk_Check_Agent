@@ -1,0 +1,240 @@
+{
+  "source_results": "results/experiment_results.json",
+  "failure_count": 5,
+  "highest_cost_failure": {
+    "case_id": "case-004",
+    "policy": "baseline",
+    "true_state": "FRAUD",
+    "evidence": {
+      "case_id": "case-004",
+      "vendor_id": "vendor-006",
+      "vendor_age_days": 2400,
+      "existing_vendor": true,
+      "invoice_amount": 22500.0,
+      "historical_average_amount": 7500.0,
+      "bank_account_changed": false,
+      "bank_change_age_days": null,
+      "email_domain_changed": false,
+      "lookalike_domain_signal": false,
+      "invoice_number_pattern_valid": true,
+      "duplicate_invoice_signal": false,
+      "purchase_order_match": true,
+      "payment_terms_match": false,
+      "unusual_urgency": false,
+      "location_changed": true,
+      "vendor_contact_verified": false,
+      "callback_verified": null,
+      "supporting_documents_available": false
+    },
+    "beliefs": {
+      "LEGITIMATE": 0.2967573591558373,
+      "ERROR": 0.6663327152672848,
+      "FRAUD": 0.03690992557687794
+    },
+    "action": "APPROVE",
+    "expected_action": [
+      "HOLD"
+    ],
+    "failure_condition": "false approval of fraud",
+    "why_it_happened": "Baseline rule: no configured warning rule triggered; APPROVE.",
+    "actual_cost": 100.0,
+    "possible_improvement": "Add stronger fraud evidence, lower the approval threshold, or require verification before approval."
+  },
+  "failures": [
+    {
+      "case_id": "case-004",
+      "policy": "baseline",
+      "true_state": "FRAUD",
+      "evidence": {
+        "case_id": "case-004",
+        "vendor_id": "vendor-006",
+        "vendor_age_days": 2400,
+        "existing_vendor": true,
+        "invoice_amount": 22500.0,
+        "historical_average_amount": 7500.0,
+        "bank_account_changed": false,
+        "bank_change_age_days": null,
+        "email_domain_changed": false,
+        "lookalike_domain_signal": false,
+        "invoice_number_pattern_valid": true,
+        "duplicate_invoice_signal": false,
+        "purchase_order_match": true,
+        "payment_terms_match": false,
+        "unusual_urgency": false,
+        "location_changed": true,
+        "vendor_contact_verified": false,
+        "callback_verified": null,
+        "supporting_documents_available": false
+      },
+      "beliefs": {
+        "LEGITIMATE": 0.2967573591558373,
+        "ERROR": 0.6663327152672848,
+        "FRAUD": 0.03690992557687794
+      },
+      "action": "APPROVE",
+      "expected_action": [
+        "HOLD"
+      ],
+      "failure_condition": "false approval of fraud",
+      "why_it_happened": "Baseline rule: no configured warning rule triggered; APPROVE.",
+      "actual_cost": 100.0,
+      "possible_improvement": "Add stronger fraud evidence, lower the approval threshold, or require verification before approval."
+    },
+    {
+      "case_id": "case-004",
+      "policy": "policy_a",
+      "true_state": "FRAUD",
+      "evidence": {
+        "case_id": "case-004",
+        "vendor_id": "vendor-006",
+        "vendor_age_days": 2400,
+        "existing_vendor": true,
+        "invoice_amount": 22500.0,
+        "historical_average_amount": 7500.0,
+        "bank_account_changed": false,
+        "bank_change_age_days": null,
+        "email_domain_changed": false,
+        "lookalike_domain_signal": false,
+        "invoice_number_pattern_valid": true,
+        "duplicate_invoice_signal": false,
+        "purchase_order_match": true,
+        "payment_terms_match": false,
+        "unusual_urgency": false,
+        "location_changed": true,
+        "vendor_contact_verified": false,
+        "callback_verified": null,
+        "supporting_documents_available": false
+      },
+      "beliefs": {
+        "LEGITIMATE": 0.2967573591558373,
+        "ERROR": 0.6663327152672848,
+        "FRAUD": 0.03690992557687794
+      },
+      "action": "APPROVE",
+      "expected_action": [
+        "HOLD"
+      ],
+      "failure_condition": "false approval of fraud",
+      "why_it_happened": "policy_a selected APPROVE using beliefs, costs, and thresholds.",
+      "actual_cost": 100.0,
+      "possible_improvement": "Add stronger fraud evidence, lower the approval threshold, or require verification before approval."
+    },
+    {
+      "case_id": "case-004",
+      "policy": "policy_b",
+      "true_state": "FRAUD",
+      "evidence": {
+        "case_id": "case-004",
+        "vendor_id": "vendor-006",
+        "vendor_age_days": 2400,
+        "existing_vendor": true,
+        "invoice_amount": 22500.0,
+        "historical_average_amount": 7500.0,
+        "bank_account_changed": false,
+        "bank_change_age_days": null,
+        "email_domain_changed": false,
+        "lookalike_domain_signal": false,
+        "invoice_number_pattern_valid": true,
+        "duplicate_invoice_signal": false,
+        "purchase_order_match": true,
+        "payment_terms_match": false,
+        "unusual_urgency": false,
+        "location_changed": true,
+        "vendor_contact_verified": false,
+        "callback_verified": null,
+        "supporting_documents_available": false
+      },
+      "beliefs": {
+        "LEGITIMATE": 0.2967573591558373,
+        "ERROR": 0.6663327152672848,
+        "FRAUD": 0.03690992557687794
+      },
+      "action": "APPROVE",
+      "expected_action": [
+        "HOLD"
+      ],
+      "failure_condition": "false approval of fraud",
+      "why_it_happened": "policy_b selected APPROVE using beliefs, costs, and thresholds.",
+      "actual_cost": 100.0,
+      "possible_improvement": "Add stronger fraud evidence, lower the approval threshold, or require verification before approval."
+    },
+    {
+      "case_id": "case-007",
+      "policy": "policy_a",
+      "true_state": "FRAUD",
+      "evidence": {
+        "case_id": "case-007",
+        "vendor_id": "vendor-008",
+        "vendor_age_days": 365,
+        "existing_vendor": true,
+        "invoice_amount": 4500.0,
+        "historical_average_amount": 1500.0,
+        "bank_account_changed": false,
+        "bank_change_age_days": null,
+        "email_domain_changed": false,
+        "lookalike_domain_signal": false,
+        "invoice_number_pattern_valid": true,
+        "duplicate_invoice_signal": true,
+        "purchase_order_match": false,
+        "payment_terms_match": true,
+        "unusual_urgency": false,
+        "location_changed": false,
+        "vendor_contact_verified": false,
+        "callback_verified": null,
+        "supporting_documents_available": false
+      },
+      "beliefs": {
+        "LEGITIMATE": 0.03525014751393814,
+        "ERROR": 0.9558997423747927,
+        "FRAUD": 0.008850110111269172
+      },
+      "action": "APPROVE",
+      "expected_action": [
+        "HOLD"
+      ],
+      "failure_condition": "false approval of fraud",
+      "why_it_happened": "policy_a selected APPROVE using beliefs, costs, and thresholds.",
+      "actual_cost": 100.0,
+      "possible_improvement": "Add stronger fraud evidence, lower the approval threshold, or require verification before approval."
+    },
+    {
+      "case_id": "case-007",
+      "policy": "policy_b",
+      "true_state": "FRAUD",
+      "evidence": {
+        "case_id": "case-007",
+        "vendor_id": "vendor-008",
+        "vendor_age_days": 365,
+        "existing_vendor": true,
+        "invoice_amount": 4500.0,
+        "historical_average_amount": 1500.0,
+        "bank_account_changed": false,
+        "bank_change_age_days": null,
+        "email_domain_changed": false,
+        "lookalike_domain_signal": false,
+        "invoice_number_pattern_valid": true,
+        "duplicate_invoice_signal": true,
+        "purchase_order_match": false,
+        "payment_terms_match": true,
+        "unusual_urgency": false,
+        "location_changed": false,
+        "vendor_contact_verified": false,
+        "callback_verified": null,
+        "supporting_documents_available": false
+      },
+      "beliefs": {
+        "LEGITIMATE": 0.03525014751393814,
+        "ERROR": 0.9558997423747927,
+        "FRAUD": 0.008850110111269172
+      },
+      "action": "APPROVE",
+      "expected_action": [
+        "HOLD"
+      ],
+      "failure_condition": "false approval of fraud",
+      "why_it_happened": "policy_b selected APPROVE using beliefs, costs, and thresholds.",
+      "actual_cost": 100.0,
+      "possible_improvement": "Add stronger fraud evidence, lower the approval threshold, or require verification before approval."
+    }
+  ]
+}
