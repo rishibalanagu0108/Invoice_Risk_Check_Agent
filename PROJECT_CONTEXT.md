@@ -80,10 +80,11 @@ Completed:
   revised duplicate likelihoods, and safety gates for duplicate/multiple-risk
   cases.
 - Re-ran the experiment, metrics, and failure analysis after the revision.
+- Added a reproducible probability decision record for `case-006`, showing
+  VERIFY before callback evidence and HOLD after a negative callback.
 
 Not completed:
 
-- Probability decision record.
 - Figures.
 - README and research documentation.
 - IJCAI-style preprint.
@@ -95,7 +96,7 @@ Verification note:
 - `python3 -m invoice_agent` succeeds with `PYTHONPATH=src`.
 - Python source compilation succeeds.
 - The virtual environment contains the development dependencies.
-- `python -m pytest` passes: 33 tests passed.
+- `python -m pytest` passes: 35 tests passed.
 - The experiment runner saves generated outputs to `results/`. These generated
   result files are currently untracked and can either be committed as the
   executed run artifact or regenerated from the recorded commands.
