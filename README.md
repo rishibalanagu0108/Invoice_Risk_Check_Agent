@@ -51,6 +51,25 @@ python -m pip install --upgrade pip
 python -m pip install -e '.[dev]'
 ```
 
+## Launch the Streamlit showcase
+
+Install the UI extra:
+
+```bash
+python -m pip install -e '.[dev,ui]'
+```
+
+Launch the app:
+
+```bash
+streamlit run app.py
+```
+
+The interface supports case and policy selection, belief and expected-cost
+display, evidence inspection, simulated callback feedback, dataset viewing,
+and result/failure-report viewing. The UI calls the same deterministic agent
+functions used by the command-line experiments.
+
 ## Run tests
 
 ```bash

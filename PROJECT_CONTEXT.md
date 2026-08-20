@@ -84,6 +84,9 @@ Completed:
   VERIFY before callback evidence and HOLD after a negative callback.
 - Added README, research, discussion, review, social-template, and completion
   checklist documentation with unsupported claims marked TODO.
+- Added a Streamlit showcase that calls the existing agent logic for case
+  decisions, feedback, dataset inspection, and result viewing.
+- Verified Streamlit startup on localhost and verified 36 passing tests.
 
 Not completed:
 
@@ -97,7 +100,7 @@ Verification note:
 - `python3 -m invoice_agent` succeeds with `PYTHONPATH=src`.
 - Python source compilation succeeds.
 - The virtual environment contains the development dependencies.
-- `python -m pytest` passes: 35 tests passed.
+- `python -m pytest` passes: 36 tests passed.
 - The experiment runner saves generated outputs to `results/`. These generated
   result files are currently untracked and can either be committed as the
   executed run artifact or regenerated from the recorded commands.
@@ -175,8 +178,8 @@ experiment.
 
 ## Immediate next action
 
-Create the IJCAI-style course preprint scaffold and verify whether the current
-official IJCAI author kit is available locally.
+If UI work is complete, return to the paused preprint/research tasks: create the
+IJCAI-style course preprint scaffold and verify the official author kit status.
 
 ## Expected future top-level structure
 
