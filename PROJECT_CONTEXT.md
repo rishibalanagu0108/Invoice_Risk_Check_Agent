@@ -68,12 +68,18 @@ Completed:
   outputs under `results/`.
 - Added policy-level metrics, action rates, review rate, state/action
   confusion matrices, fraud-protective precision/recall, and cost summaries.
+- Added simulated callback feedback with separate initial and post-feedback
+  decisions.
+- Generated 8 feedback records: 6 baseline verifications and 2 Policy B
+  verifications; both Policy B records changed from VERIFY to HOLD after a
+  negative callback.
 
 Not completed:
 
 - Probability model and configurable assumptions.
 - Metrics, failure analysis, and figures.
 - Feedback-loop experiment.
+- Failure analysis report.
 - Configuration file for priors, likelihoods, costs, and thresholds.
 - Synthetic 40-case dataset.
 - Experiment runner and result files.
@@ -92,6 +98,7 @@ Verification note:
 - The virtual environment contains the development dependencies.
 - `python -m pytest` passes: 23 tests passed.
 - `python -m pytest` passes: 26 tests passed.
+- `python -m pytest` passes: 29 tests passed.
 - The experiment runner saves generated outputs to `results/`. These generated
   result files are currently untracked and can either be committed as the
   executed run artifact or regenerated from the recorded commands.
@@ -160,8 +167,8 @@ experiment.
 
 ## Immediate next action
 
-Implement the verification feedback loop, then use the recorded metrics and
-observed policy failure for failure analysis.
+Use the executed experiment and feedback outputs to generate the failure
+analysis report and probability decision record.
 
 ## Expected future top-level structure
 

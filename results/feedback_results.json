@@ -1,0 +1,530 @@
+[
+  {
+    "case_id": "case-008",
+    "policy": "baseline",
+    "true_state": "LEGITIMATE",
+    "initial": {
+      "evidence": {
+        "case_id": "case-008",
+        "vendor_id": "vendor-006",
+        "vendor_age_days": 120,
+        "existing_vendor": true,
+        "invoice_amount": 1650.0,
+        "historical_average_amount": 1500.0,
+        "bank_account_changed": true,
+        "bank_change_age_days": 90,
+        "email_domain_changed": false,
+        "lookalike_domain_signal": false,
+        "invoice_number_pattern_valid": true,
+        "duplicate_invoice_signal": false,
+        "purchase_order_match": true,
+        "payment_terms_match": true,
+        "unusual_urgency": false,
+        "location_changed": false,
+        "vendor_contact_verified": true,
+        "callback_verified": null,
+        "supporting_documents_available": true
+      },
+      "beliefs": {
+        "LEGITIMATE": 0.9260840898536158,
+        "ERROR": 0.07350002093170419,
+        "FRAUD": 0.0004158892146800165
+      },
+      "action": "VERIFY"
+    },
+    "new_evidence": {
+      "callback_verified": true
+    },
+    "post_feedback": {
+      "evidence": {
+        "case_id": "case-008",
+        "vendor_id": "vendor-006",
+        "vendor_age_days": 120,
+        "existing_vendor": true,
+        "invoice_amount": 1650.0,
+        "historical_average_amount": 1500.0,
+        "bank_account_changed": true,
+        "bank_change_age_days": 90,
+        "email_domain_changed": false,
+        "lookalike_domain_signal": false,
+        "invoice_number_pattern_valid": true,
+        "duplicate_invoice_signal": false,
+        "purchase_order_match": true,
+        "payment_terms_match": true,
+        "unusual_urgency": false,
+        "location_changed": false,
+        "vendor_contact_verified": true,
+        "callback_verified": true,
+        "supporting_documents_available": true
+      },
+      "beliefs": {
+        "LEGITIMATE": 0.9469013508191996,
+        "ERROR": 0.053048621191856334,
+        "FRAUD": 5.00279889440191e-05
+      },
+      "action": "VERIFY"
+    }
+  },
+  {
+    "case_id": "case-010",
+    "policy": "baseline",
+    "true_state": "FRAUD",
+    "initial": {
+      "evidence": {
+        "case_id": "case-010",
+        "vendor_id": "vendor-008",
+        "vendor_age_days": 800,
+        "existing_vendor": true,
+        "invoice_amount": 4500.0,
+        "historical_average_amount": 900.0,
+        "bank_account_changed": true,
+        "bank_change_age_days": 1,
+        "email_domain_changed": true,
+        "lookalike_domain_signal": false,
+        "invoice_number_pattern_valid": true,
+        "duplicate_invoice_signal": false,
+        "purchase_order_match": true,
+        "payment_terms_match": true,
+        "unusual_urgency": false,
+        "location_changed": false,
+        "vendor_contact_verified": false,
+        "callback_verified": null,
+        "supporting_documents_available": false
+      },
+      "beliefs": {
+        "LEGITIMATE": 0.4797732792245779,
+        "ERROR": 0.42874736942018643,
+        "FRAUD": 0.09147935135523569
+      },
+      "action": "VERIFY"
+    },
+    "new_evidence": {
+      "callback_verified": false
+    },
+    "post_feedback": {
+      "evidence": {
+        "case_id": "case-010",
+        "vendor_id": "vendor-008",
+        "vendor_age_days": 800,
+        "existing_vendor": true,
+        "invoice_amount": 4500.0,
+        "historical_average_amount": 900.0,
+        "bank_account_changed": true,
+        "bank_change_age_days": 1,
+        "email_domain_changed": true,
+        "lookalike_domain_signal": false,
+        "invoice_number_pattern_valid": true,
+        "duplicate_invoice_signal": false,
+        "purchase_order_match": true,
+        "payment_terms_match": true,
+        "unusual_urgency": false,
+        "location_changed": false,
+        "vendor_contact_verified": false,
+        "callback_verified": false,
+        "supporting_documents_available": false
+      },
+      "beliefs": {
+        "LEGITIMATE": 0.11235543876656033,
+        "ERROR": 0.5020298221804951,
+        "FRAUD": 0.3856147390529446
+      },
+      "action": "VERIFY"
+    }
+  },
+  {
+    "case_id": "case-016",
+    "policy": "policy_b",
+    "true_state": "FRAUD",
+    "initial": {
+      "evidence": {
+        "case_id": "case-016",
+        "vendor_id": "vendor-012",
+        "vendor_age_days": 2400,
+        "existing_vendor": true,
+        "invoice_amount": 4500.0,
+        "historical_average_amount": 900.0,
+        "bank_account_changed": false,
+        "bank_change_age_days": null,
+        "email_domain_changed": false,
+        "lookalike_domain_signal": true,
+        "invoice_number_pattern_valid": true,
+        "duplicate_invoice_signal": false,
+        "purchase_order_match": true,
+        "payment_terms_match": true,
+        "unusual_urgency": true,
+        "location_changed": false,
+        "vendor_contact_verified": false,
+        "callback_verified": null,
+        "supporting_documents_available": false
+      },
+      "beliefs": {
+        "LEGITIMATE": 0.5321707581893352,
+        "ERROR": 0.29502251869490853,
+        "FRAUD": 0.1728067231157561
+      },
+      "action": "VERIFY"
+    },
+    "new_evidence": {
+      "callback_verified": false
+    },
+    "post_feedback": {
+      "evidence": {
+        "case_id": "case-016",
+        "vendor_id": "vendor-012",
+        "vendor_age_days": 2400,
+        "existing_vendor": true,
+        "invoice_amount": 4500.0,
+        "historical_average_amount": 900.0,
+        "bank_account_changed": false,
+        "bank_change_age_days": null,
+        "email_domain_changed": false,
+        "lookalike_domain_signal": true,
+        "invoice_number_pattern_valid": true,
+        "duplicate_invoice_signal": false,
+        "purchase_order_match": true,
+        "payment_terms_match": true,
+        "unusual_urgency": true,
+        "location_changed": false,
+        "vendor_contact_verified": false,
+        "callback_verified": false,
+        "supporting_documents_available": false
+      },
+      "beliefs": {
+        "LEGITIMATE": 0.10398419321048823,
+        "ERROR": 0.2882315320160993,
+        "FRAUD": 0.6077842747734125
+      },
+      "action": "HOLD"
+    }
+  },
+  {
+    "case_id": "case-023",
+    "policy": "baseline",
+    "true_state": "FRAUD",
+    "initial": {
+      "evidence": {
+        "case_id": "case-023",
+        "vendor_id": "vendor-011",
+        "vendor_age_days": 2400,
+        "existing_vendor": true,
+        "invoice_amount": 2500.0,
+        "historical_average_amount": 500.0,
+        "bank_account_changed": true,
+        "bank_change_age_days": 3,
+        "email_domain_changed": false,
+        "lookalike_domain_signal": false,
+        "invoice_number_pattern_valid": true,
+        "duplicate_invoice_signal": false,
+        "purchase_order_match": true,
+        "payment_terms_match": true,
+        "unusual_urgency": false,
+        "location_changed": false,
+        "vendor_contact_verified": false,
+        "callback_verified": null,
+        "supporting_documents_available": false
+      },
+      "beliefs": {
+        "LEGITIMATE": 0.7233836227359742,
+        "ERROR": 0.2661847697063164,
+        "FRAUD": 0.01043160755770936
+      },
+      "action": "VERIFY"
+    },
+    "new_evidence": {
+      "callback_verified": false
+    },
+    "post_feedback": {
+      "evidence": {
+        "case_id": "case-023",
+        "vendor_id": "vendor-011",
+        "vendor_age_days": 2400,
+        "existing_vendor": true,
+        "invoice_amount": 2500.0,
+        "historical_average_amount": 500.0,
+        "bank_account_changed": true,
+        "bank_change_age_days": 3,
+        "email_domain_changed": false,
+        "lookalike_domain_signal": false,
+        "invoice_number_pattern_valid": true,
+        "duplicate_invoice_signal": false,
+        "purchase_order_match": true,
+        "payment_terms_match": true,
+        "unusual_urgency": false,
+        "location_changed": false,
+        "vendor_contact_verified": false,
+        "callback_verified": false,
+        "supporting_documents_available": false
+      },
+      "beliefs": {
+        "LEGITIMATE": 0.32264004044583916,
+        "ERROR": 0.5936121731598702,
+        "FRAUD": 0.08374778639429058
+      },
+      "action": "VERIFY"
+    }
+  },
+  {
+    "case_id": "case-028",
+    "policy": "baseline",
+    "true_state": "FRAUD",
+    "initial": {
+      "evidence": {
+        "case_id": "case-028",
+        "vendor_id": "vendor-006",
+        "vendor_age_days": 120,
+        "existing_vendor": true,
+        "invoice_amount": 1800.0,
+        "historical_average_amount": 900.0,
+        "bank_account_changed": true,
+        "bank_change_age_days": 3,
+        "email_domain_changed": false,
+        "lookalike_domain_signal": false,
+        "invoice_number_pattern_valid": true,
+        "duplicate_invoice_signal": false,
+        "purchase_order_match": true,
+        "payment_terms_match": true,
+        "unusual_urgency": false,
+        "location_changed": false,
+        "vendor_contact_verified": false,
+        "callback_verified": null,
+        "supporting_documents_available": false
+      },
+      "beliefs": {
+        "LEGITIMATE": 0.7233836227359742,
+        "ERROR": 0.2661847697063164,
+        "FRAUD": 0.01043160755770936
+      },
+      "action": "VERIFY"
+    },
+    "new_evidence": {
+      "callback_verified": false
+    },
+    "post_feedback": {
+      "evidence": {
+        "case_id": "case-028",
+        "vendor_id": "vendor-006",
+        "vendor_age_days": 120,
+        "existing_vendor": true,
+        "invoice_amount": 1800.0,
+        "historical_average_amount": 900.0,
+        "bank_account_changed": true,
+        "bank_change_age_days": 3,
+        "email_domain_changed": false,
+        "lookalike_domain_signal": false,
+        "invoice_number_pattern_valid": true,
+        "duplicate_invoice_signal": false,
+        "purchase_order_match": true,
+        "payment_terms_match": true,
+        "unusual_urgency": false,
+        "location_changed": false,
+        "vendor_contact_verified": false,
+        "callback_verified": false,
+        "supporting_documents_available": false
+      },
+      "beliefs": {
+        "LEGITIMATE": 0.32264004044583916,
+        "ERROR": 0.5936121731598702,
+        "FRAUD": 0.08374778639429058
+      },
+      "action": "VERIFY"
+    }
+  },
+  {
+    "case_id": "case-031",
+    "policy": "policy_b",
+    "true_state": "FRAUD",
+    "initial": {
+      "evidence": {
+        "case_id": "case-031",
+        "vendor_id": "vendor-004",
+        "vendor_age_days": 2400,
+        "existing_vendor": true,
+        "invoice_amount": 1000.0,
+        "historical_average_amount": 500.0,
+        "bank_account_changed": false,
+        "bank_change_age_days": null,
+        "email_domain_changed": false,
+        "lookalike_domain_signal": true,
+        "invoice_number_pattern_valid": true,
+        "duplicate_invoice_signal": false,
+        "purchase_order_match": true,
+        "payment_terms_match": true,
+        "unusual_urgency": true,
+        "location_changed": false,
+        "vendor_contact_verified": false,
+        "callback_verified": null,
+        "supporting_documents_available": false
+      },
+      "beliefs": {
+        "LEGITIMATE": 0.5321707581893352,
+        "ERROR": 0.29502251869490853,
+        "FRAUD": 0.1728067231157561
+      },
+      "action": "VERIFY"
+    },
+    "new_evidence": {
+      "callback_verified": false
+    },
+    "post_feedback": {
+      "evidence": {
+        "case_id": "case-031",
+        "vendor_id": "vendor-004",
+        "vendor_age_days": 2400,
+        "existing_vendor": true,
+        "invoice_amount": 1000.0,
+        "historical_average_amount": 500.0,
+        "bank_account_changed": false,
+        "bank_change_age_days": null,
+        "email_domain_changed": false,
+        "lookalike_domain_signal": true,
+        "invoice_number_pattern_valid": true,
+        "duplicate_invoice_signal": false,
+        "purchase_order_match": true,
+        "payment_terms_match": true,
+        "unusual_urgency": true,
+        "location_changed": false,
+        "vendor_contact_verified": false,
+        "callback_verified": false,
+        "supporting_documents_available": false
+      },
+      "beliefs": {
+        "LEGITIMATE": 0.10398419321048823,
+        "ERROR": 0.2882315320160993,
+        "FRAUD": 0.6077842747734125
+      },
+      "action": "HOLD"
+    }
+  },
+  {
+    "case_id": "case-036",
+    "policy": "baseline",
+    "true_state": "LEGITIMATE",
+    "initial": {
+      "evidence": {
+        "case_id": "case-036",
+        "vendor_id": "vendor-011",
+        "vendor_age_days": 365,
+        "existing_vendor": true,
+        "invoice_amount": 3900.0,
+        "historical_average_amount": 3000.0,
+        "bank_account_changed": true,
+        "bank_change_age_days": 90,
+        "email_domain_changed": false,
+        "lookalike_domain_signal": false,
+        "invoice_number_pattern_valid": true,
+        "duplicate_invoice_signal": false,
+        "purchase_order_match": true,
+        "payment_terms_match": true,
+        "unusual_urgency": false,
+        "location_changed": false,
+        "vendor_contact_verified": true,
+        "callback_verified": null,
+        "supporting_documents_available": true
+      },
+      "beliefs": {
+        "LEGITIMATE": 0.9260840898536158,
+        "ERROR": 0.07350002093170419,
+        "FRAUD": 0.0004158892146800165
+      },
+      "action": "VERIFY"
+    },
+    "new_evidence": {
+      "callback_verified": true
+    },
+    "post_feedback": {
+      "evidence": {
+        "case_id": "case-036",
+        "vendor_id": "vendor-011",
+        "vendor_age_days": 365,
+        "existing_vendor": true,
+        "invoice_amount": 3900.0,
+        "historical_average_amount": 3000.0,
+        "bank_account_changed": true,
+        "bank_change_age_days": 90,
+        "email_domain_changed": false,
+        "lookalike_domain_signal": false,
+        "invoice_number_pattern_valid": true,
+        "duplicate_invoice_signal": false,
+        "purchase_order_match": true,
+        "payment_terms_match": true,
+        "unusual_urgency": false,
+        "location_changed": false,
+        "vendor_contact_verified": true,
+        "callback_verified": true,
+        "supporting_documents_available": true
+      },
+      "beliefs": {
+        "LEGITIMATE": 0.9469013508191996,
+        "ERROR": 0.053048621191856334,
+        "FRAUD": 5.00279889440191e-05
+      },
+      "action": "VERIFY"
+    }
+  },
+  {
+    "case_id": "case-040",
+    "policy": "baseline",
+    "true_state": "LEGITIMATE",
+    "initial": {
+      "evidence": {
+        "case_id": "case-040",
+        "vendor_id": "vendor-002",
+        "vendor_age_days": 30,
+        "existing_vendor": true,
+        "invoice_amount": 500.0,
+        "historical_average_amount": 500.0,
+        "bank_account_changed": true,
+        "bank_change_age_days": 90,
+        "email_domain_changed": false,
+        "lookalike_domain_signal": false,
+        "invoice_number_pattern_valid": true,
+        "duplicate_invoice_signal": false,
+        "purchase_order_match": true,
+        "payment_terms_match": true,
+        "unusual_urgency": false,
+        "location_changed": false,
+        "vendor_contact_verified": true,
+        "callback_verified": true,
+        "supporting_documents_available": true
+      },
+      "beliefs": {
+        "LEGITIMATE": 0.9469013508191996,
+        "ERROR": 0.053048621191856334,
+        "FRAUD": 5.00279889440191e-05
+      },
+      "action": "VERIFY"
+    },
+    "new_evidence": {
+      "callback_verified": true
+    },
+    "post_feedback": {
+      "evidence": {
+        "case_id": "case-040",
+        "vendor_id": "vendor-002",
+        "vendor_age_days": 30,
+        "existing_vendor": true,
+        "invoice_amount": 500.0,
+        "historical_average_amount": 500.0,
+        "bank_account_changed": true,
+        "bank_change_age_days": 90,
+        "email_domain_changed": false,
+        "lookalike_domain_signal": false,
+        "invoice_number_pattern_valid": true,
+        "duplicate_invoice_signal": false,
+        "purchase_order_match": true,
+        "payment_terms_match": true,
+        "unusual_urgency": false,
+        "location_changed": false,
+        "vendor_contact_verified": true,
+        "callback_verified": true,
+        "supporting_documents_available": true
+      },
+      "beliefs": {
+        "LEGITIMATE": 0.9469013508191996,
+        "ERROR": 0.053048621191856334,
+        "FRAUD": 5.00279889440191e-05
+      },
+      "action": "VERIFY"
+    }
+  }
+]
