@@ -93,9 +93,9 @@ def render_decision(case, config, policy_name):
     if action is Action.VERIFY:
         st.subheader("Simulated verification feedback")
         callback = st.selectbox(
-            "Independent callback result",
+            "Verification result",
             options=[True, False],
-            format_func=lambda value: "Vendor confirmed" if value else "Vendor denied",
+            format_func=lambda value: "Verification passed" if value else "Verification failed",
         )
         if st.button("Apply callback and decide again"):
             updated_case = apply_callback_result(case, callback)

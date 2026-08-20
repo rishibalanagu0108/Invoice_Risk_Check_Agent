@@ -875,7 +875,7 @@
       "email_domain_changed": false,
       "lookalike_domain_signal": false,
       "invoice_number_pattern_valid": true,
-      "duplicate_invoice_signal": false,
+      "duplicate_invoice_signal": true,
       "purchase_order_match": true,
       "payment_terms_match": true,
       "unusual_urgency": false,
@@ -886,20 +886,20 @@
       "amount_deviation_ratio": 1.1,
       "amount_unusual": false,
       "supporting_documents_missing": false,
-      "high_risk_signal_count": 1,
-      "multiple_high_risk_signals": false
+      "high_risk_signal_count": 2,
+      "multiple_high_risk_signals": true
     },
     "true_state": "LEGITIMATE",
     "beliefs": {
-      "LEGITIMATE": 0.957621181469224,
-      "ERROR": 0.04237204758150432,
-      "FRAUD": 6.7709492717100545e-06
+      "LEGITIMATE": 0.18012641419910738,
+      "ERROR": 0.8160484446329324,
+      "FRAUD": 0.0038251411679601677
     },
-    "action": "VERIFY",
-    "expected_cost": 5.12715,
-    "actual_cost": 5.0,
-    "human_review_required": false,
-    "explanation": "Baseline rule: bank account change triggered VERIFY."
+    "action": "HOLD",
+    "expected_cost": 9.249409,
+    "actual_cost": 15.0,
+    "human_review_required": true,
+    "explanation": "Baseline rule: duplicate invoice signal triggered HOLD."
   },
   {
     "case_id": "case-008",
@@ -916,7 +916,7 @@
       "email_domain_changed": false,
       "lookalike_domain_signal": false,
       "invoice_number_pattern_valid": true,
-      "duplicate_invoice_signal": false,
+      "duplicate_invoice_signal": true,
       "purchase_order_match": true,
       "payment_terms_match": true,
       "unusual_urgency": false,
@@ -927,20 +927,20 @@
       "amount_deviation_ratio": 1.1,
       "amount_unusual": false,
       "supporting_documents_missing": false,
-      "high_risk_signal_count": 1,
-      "multiple_high_risk_signals": false
+      "high_risk_signal_count": 2,
+      "multiple_high_risk_signals": true
     },
     "true_state": "LEGITIMATE",
     "beliefs": {
-      "LEGITIMATE": 0.957621181469224,
-      "ERROR": 0.04237204758150432,
-      "FRAUD": 6.7709492717100545e-06
+      "LEGITIMATE": 0.18012641419910738,
+      "ERROR": 0.8160484446329324,
+      "FRAUD": 0.0038251411679601677
     },
-    "action": "APPROVE",
-    "expected_cost": 1.059978,
-    "actual_cost": 0.0,
+    "action": "VERIFY",
+    "expected_cost": 7.467271,
+    "actual_cost": 5.0,
     "human_review_required": false,
-    "explanation": "policy_a selected APPROVE using beliefs, costs, and thresholds."
+    "explanation": "policy_a selected VERIFY using beliefs, costs, and thresholds."
   },
   {
     "case_id": "case-008",
@@ -957,7 +957,7 @@
       "email_domain_changed": false,
       "lookalike_domain_signal": false,
       "invoice_number_pattern_valid": true,
-      "duplicate_invoice_signal": false,
+      "duplicate_invoice_signal": true,
       "purchase_order_match": true,
       "payment_terms_match": true,
       "unusual_urgency": false,
@@ -968,20 +968,20 @@
       "amount_deviation_ratio": 1.1,
       "amount_unusual": false,
       "supporting_documents_missing": false,
-      "high_risk_signal_count": 1,
-      "multiple_high_risk_signals": false
+      "high_risk_signal_count": 2,
+      "multiple_high_risk_signals": true
     },
     "true_state": "LEGITIMATE",
     "beliefs": {
-      "LEGITIMATE": 0.957621181469224,
-      "ERROR": 0.04237204758150432,
-      "FRAUD": 6.7709492717100545e-06
+      "LEGITIMATE": 0.18012641419910738,
+      "ERROR": 0.8160484446329324,
+      "FRAUD": 0.0038251411679601677
     },
-    "action": "APPROVE",
-    "expected_cost": 1.059978,
-    "actual_cost": 0.0,
+    "action": "VERIFY",
+    "expected_cost": 7.467271,
+    "actual_cost": 5.0,
     "human_review_required": false,
-    "explanation": "policy_b selected APPROVE using beliefs, costs, and thresholds."
+    "explanation": "policy_b selected VERIFY using beliefs, costs, and thresholds."
   },
   {
     "case_id": "case-009",

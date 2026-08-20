@@ -6,7 +6,7 @@ case-004,vendor-006,2400,true,22500.0,7500.0,false,,false,false,true,false,true,
 case-005,vendor-001,120,true,900.0,500.0,false,,false,false,true,true,true,true,false,false,true,,true,ERROR
 case-006,vendor-004,30,true,1100.0,500.0,false,,false,false,true,false,false,true,false,false,false,,true,ERROR
 case-007,vendor-008,365,true,4500.0,1500.0,false,,false,false,true,true,false,true,false,false,false,,false,FRAUD
-case-008,vendor-006,120,true,1650.0,1500.0,true,90,false,false,true,false,true,true,false,false,true,,true,LEGITIMATE
+case-008,vendor-006,120,true,1650.0,1500.0,true,90,false,false,true,true,true,true,false,false,true,,true,LEGITIMATE
 case-009,vendor-010,120,true,500.0,500.0,false,,false,false,true,false,true,true,false,false,true,,true,LEGITIMATE
 case-010,vendor-008,800,true,4500.0,900.0,true,1,true,false,true,false,true,true,false,false,false,,false,FRAUD
 case-011,vendor-004,365,true,5250.0,7500.0,false,,false,false,true,false,false,true,false,false,true,,true,ERROR

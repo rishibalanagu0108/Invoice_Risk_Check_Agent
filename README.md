@@ -67,8 +67,10 @@ streamlit run app.py
 
 The interface supports case and policy selection, belief and expected-cost
 display, evidence inspection, simulated callback feedback, dataset viewing,
-and result/failure-report viewing. The UI calls the same deterministic agent
-functions used by the command-line experiments.
+and result/failure-report viewing. Select `case-008` with either belief-based
+policy to demonstrate `VERIFY → successful verification → APPROVE`. The UI
+calls the same deterministic agent functions used by the command-line
+experiments.
 
 ## Run tests
 

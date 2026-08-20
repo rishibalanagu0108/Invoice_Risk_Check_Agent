@@ -14,9 +14,21 @@ from .policies import baseline_action, policy_a_action, policy_b_action
 
 
 def apply_callback_result(case: InvoiceCase, callback_verified: bool) -> InvoiceCase:
-    """Return a copy of a case containing independent callback evidence."""
+    """Return a copy containing verification evidence.
 
-    return replace(case, callback_verified=callback_verified)
+    A successful verification resolves a suspected duplicate signal in the
+    simulation. This models an accounting check that confirms the invoice is
+    not actually a duplicate.
+    """
+
+    return replace(
+        case,
+        callback_verified=callback_verified,
+        duplicate_invoice_signal=(
+            False if callback_verified and case.duplicate_invoice_signal
+            else case.duplicate_invoice_signal
+        ),
+    )
 
 
 def simulate_callback_result(case: InvoiceCase) -> bool:

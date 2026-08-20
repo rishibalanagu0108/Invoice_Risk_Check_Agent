@@ -31,6 +31,14 @@ def test_observation_does_not_include_hidden_state() -> None:
     assert all("true_state" not in case.observation() for case in generate_cases())
 
 
+def test_showcase_case_is_legitimate_and_requires_verification() -> None:
+    case = next(case for case in generate_cases() if case.case_id == "case-008")
+
+    assert case.true_state is HiddenState.LEGITIMATE
+    assert case.bank_account_changed is True
+    assert case.duplicate_invoice_signal is True
+
+
 def test_csv_round_trip_preserves_cases(tmp_path) -> None:
     original = generate_cases()
     path = tmp_path / "cases.csv"

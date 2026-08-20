@@ -1,4 +1,4 @@
 policy,case_count,approval_rate,verification_rate,hold_rate,escalation_rate,human_review_rate,fraud_precision,fraud_recall,total_actual_cost,average_actual_cost,average_expected_cost
-baseline,40,0.575,0.15,0.2,0.075,0.275,0.6363636363636364,0.5833333333333334,520.0,13.0,7.828788725
-policy_a,40,0.5,0.2,0.3,0.0,0.3,1.0,1.0,224.0,5.6,3.625989425
-policy_b,40,0.5,0.2,0.3,0.0,0.3,1.0,1.0,224.0,5.6,3.625989425
+baseline,40,0.575,0.125,0.225,0.075,0.3,0.5833333333333334,0.5833333333333334,530.0,13.25,7.9318452
+policy_a,40,0.475,0.225,0.3,0.0,0.3,1.0,1.0,229.0,5.725,3.78617175
+policy_b,40,0.475,0.225,0.3,0.0,0.3,1.0,1.0,229.0,5.725,3.78617175

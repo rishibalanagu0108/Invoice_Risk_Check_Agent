@@ -86,7 +86,9 @@ Completed:
   checklist documentation with unsupported claims marked TODO.
 - Added a Streamlit showcase that calls the existing agent logic for case
   decisions, feedback, dataset inspection, and result viewing.
-- Verified Streamlit startup on localhost and verified 36 passing tests.
+- Added showcase `case-008`: a legitimate case that transitions from VERIFY to
+  APPROVE after successful verification clears the duplicate signal.
+- Verified Streamlit startup on localhost and verified 38 passing tests.
 
 Not completed:
 
@@ -100,7 +102,7 @@ Verification note:
 - `python3 -m invoice_agent` succeeds with `PYTHONPATH=src`.
 - Python source compilation succeeds.
 - The virtual environment contains the development dependencies.
-- `python -m pytest` passes: 36 tests passed.
+- `python -m pytest` passes: 38 tests passed.
 - The experiment runner saves generated outputs to `results/`. These generated
   result files are currently untracked and can either be committed as the
   executed run artifact or regenerated from the recorded commands.

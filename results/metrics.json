@@ -5,16 +5,16 @@
       "case_count": 40,
       "action_rates": {
         "approve": 0.575,
-        "verify": 0.15,
-        "hold": 0.2,
+        "verify": 0.125,
+        "hold": 0.225,
         "escalate": 0.075
       },
-      "human_review_rate": 0.275,
+      "human_review_rate": 0.3,
       "confusion_matrix": {
         "LEGITIMATE": {
           "APPROVE": 13,
-          "VERIFY": 3,
-          "HOLD": 0,
+          "VERIFY": 2,
+          "HOLD": 1,
           "ESCALATE": 0
         },
         "ERROR": {
@@ -31,28 +31,28 @@
         }
       },
       "true_positive": 7,
-      "false_positive": 4,
+      "false_positive": 5,
       "false_negative": 5,
-      "fraud_precision": 0.6363636363636364,
+      "fraud_precision": 0.5833333333333334,
       "fraud_recall": 0.5833333333333334,
-      "total_actual_cost": 520.0,
-      "average_actual_cost": 13.0,
-      "average_expected_cost": 7.828788725
+      "total_actual_cost": 530.0,
+      "average_actual_cost": 13.25,
+      "average_expected_cost": 7.9318452
     },
     "policy_a": {
       "policy": "policy_a",
       "case_count": 40,
       "action_rates": {
-        "approve": 0.5,
-        "verify": 0.2,
+        "approve": 0.475,
+        "verify": 0.225,
         "hold": 0.3,
         "escalate": 0.0
       },
       "human_review_rate": 0.3,
       "confusion_matrix": {
         "LEGITIMATE": {
-          "APPROVE": 16,
-          "VERIFY": 0,
+          "APPROVE": 15,
+          "VERIFY": 1,
           "HOLD": 0,
           "ESCALATE": 0
         },
@@ -74,24 +74,24 @@
       "false_negative": 0,
       "fraud_precision": 1.0,
       "fraud_recall": 1.0,
-      "total_actual_cost": 224.0,
-      "average_actual_cost": 5.6,
-      "average_expected_cost": 3.625989425
+      "total_actual_cost": 229.0,
+      "average_actual_cost": 5.725,
+      "average_expected_cost": 3.78617175
     },
     "policy_b": {
       "policy": "policy_b",
       "case_count": 40,
       "action_rates": {
-        "approve": 0.5,
-        "verify": 0.2,
+        "approve": 0.475,
+        "verify": 0.225,
         "hold": 0.3,
         "escalate": 0.0
       },
       "human_review_rate": 0.3,
       "confusion_matrix": {
         "LEGITIMATE": {
-          "APPROVE": 16,
-          "VERIFY": 0,
+          "APPROVE": 15,
+          "VERIFY": 1,
           "HOLD": 0,
           "ESCALATE": 0
         },
@@ -113,9 +113,9 @@
       "false_negative": 0,
       "fraud_precision": 1.0,
       "fraud_recall": 1.0,
-      "total_actual_cost": 224.0,
-      "average_actual_cost": 5.6,
-      "average_expected_cost": 3.625989425
+      "total_actual_cost": 229.0,
+      "average_actual_cost": 5.725,
+      "average_expected_cost": 3.78617175
     }
   },
   "definitions": {

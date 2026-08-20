@@ -55,6 +55,10 @@ def _case_for_state(
         )
         if index % 4 == 0:
             case = replace(case, bank_account_changed=True, bank_change_age_days=90)
+        # Showcase case: verification can resolve a suspected duplicate while
+        # the legitimate bank-account change remains independently confirmed.
+        if index == 8:
+            case = replace(case, duplicate_invoice_signal=True)
 
     elif state is HiddenState.ERROR:
         scenarios = [

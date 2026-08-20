@@ -1,7 +1,311 @@
 [
   {
+    "case_id": "case-005",
+    "policy": "policy_a",
+    "true_state": "ERROR",
+    "initial": {
+      "evidence": {
+        "case_id": "case-005",
+        "vendor_id": "vendor-001",
+        "vendor_age_days": 120,
+        "existing_vendor": true,
+        "invoice_amount": 900.0,
+        "historical_average_amount": 500.0,
+        "bank_account_changed": false,
+        "bank_change_age_days": null,
+        "email_domain_changed": false,
+        "lookalike_domain_signal": false,
+        "invoice_number_pattern_valid": true,
+        "duplicate_invoice_signal": true,
+        "purchase_order_match": true,
+        "payment_terms_match": true,
+        "unusual_urgency": false,
+        "location_changed": false,
+        "vendor_contact_verified": true,
+        "callback_verified": null,
+        "supporting_documents_available": true,
+        "amount_deviation_ratio": 1.8,
+        "amount_unusual": false,
+        "supporting_documents_missing": false,
+        "high_risk_signal_count": 1,
+        "multiple_high_risk_signals": false
+      },
+      "beliefs": {
+        "LEGITIMATE": 0.8355489167414218,
+        "ERROR": 0.16444459802158332,
+        "FRAUD": 6.485236994851994e-06
+      },
+      "action": "VERIFY"
+    },
+    "new_evidence": {
+      "callback_verified": false
+    },
+    "post_feedback": {
+      "evidence": {
+        "case_id": "case-005",
+        "vendor_id": "vendor-001",
+        "vendor_age_days": 120,
+        "existing_vendor": true,
+        "invoice_amount": 900.0,
+        "historical_average_amount": 500.0,
+        "bank_account_changed": false,
+        "bank_change_age_days": null,
+        "email_domain_changed": false,
+        "lookalike_domain_signal": false,
+        "invoice_number_pattern_valid": true,
+        "duplicate_invoice_signal": true,
+        "purchase_order_match": true,
+        "payment_terms_match": true,
+        "unusual_urgency": false,
+        "location_changed": false,
+        "vendor_contact_verified": true,
+        "callback_verified": false,
+        "supporting_documents_available": true,
+        "amount_deviation_ratio": 1.8,
+        "amount_unusual": false,
+        "supporting_documents_missing": false,
+        "high_risk_signal_count": 1,
+        "multiple_high_risk_signals": false
+      },
+      "beliefs": {
+        "LEGITIMATE": 0.5039837393296549,
+        "ERROR": 0.4959458492669417,
+        "FRAUD": 7.041140340331297e-05
+      },
+      "action": "VERIFY"
+    }
+  },
+  {
+    "case_id": "case-005",
+    "policy": "policy_b",
+    "true_state": "ERROR",
+    "initial": {
+      "evidence": {
+        "case_id": "case-005",
+        "vendor_id": "vendor-001",
+        "vendor_age_days": 120,
+        "existing_vendor": true,
+        "invoice_amount": 900.0,
+        "historical_average_amount": 500.0,
+        "bank_account_changed": false,
+        "bank_change_age_days": null,
+        "email_domain_changed": false,
+        "lookalike_domain_signal": false,
+        "invoice_number_pattern_valid": true,
+        "duplicate_invoice_signal": true,
+        "purchase_order_match": true,
+        "payment_terms_match": true,
+        "unusual_urgency": false,
+        "location_changed": false,
+        "vendor_contact_verified": true,
+        "callback_verified": null,
+        "supporting_documents_available": true,
+        "amount_deviation_ratio": 1.8,
+        "amount_unusual": false,
+        "supporting_documents_missing": false,
+        "high_risk_signal_count": 1,
+        "multiple_high_risk_signals": false
+      },
+      "beliefs": {
+        "LEGITIMATE": 0.8355489167414218,
+        "ERROR": 0.16444459802158332,
+        "FRAUD": 6.485236994851994e-06
+      },
+      "action": "VERIFY"
+    },
+    "new_evidence": {
+      "callback_verified": false
+    },
+    "post_feedback": {
+      "evidence": {
+        "case_id": "case-005",
+        "vendor_id": "vendor-001",
+        "vendor_age_days": 120,
+        "existing_vendor": true,
+        "invoice_amount": 900.0,
+        "historical_average_amount": 500.0,
+        "bank_account_changed": false,
+        "bank_change_age_days": null,
+        "email_domain_changed": false,
+        "lookalike_domain_signal": false,
+        "invoice_number_pattern_valid": true,
+        "duplicate_invoice_signal": true,
+        "purchase_order_match": true,
+        "payment_terms_match": true,
+        "unusual_urgency": false,
+        "location_changed": false,
+        "vendor_contact_verified": true,
+        "callback_verified": false,
+        "supporting_documents_available": true,
+        "amount_deviation_ratio": 1.8,
+        "amount_unusual": false,
+        "supporting_documents_missing": false,
+        "high_risk_signal_count": 1,
+        "multiple_high_risk_signals": false
+      },
+      "beliefs": {
+        "LEGITIMATE": 0.5039837393296549,
+        "ERROR": 0.4959458492669417,
+        "FRAUD": 7.041140340331297e-05
+      },
+      "action": "VERIFY"
+    }
+  },
+  {
+    "case_id": "case-006",
+    "policy": "policy_a",
+    "true_state": "ERROR",
+    "initial": {
+      "evidence": {
+        "case_id": "case-006",
+        "vendor_id": "vendor-004",
+        "vendor_age_days": 30,
+        "existing_vendor": true,
+        "invoice_amount": 1100.0,
+        "historical_average_amount": 500.0,
+        "bank_account_changed": false,
+        "bank_change_age_days": null,
+        "email_domain_changed": false,
+        "lookalike_domain_signal": false,
+        "invoice_number_pattern_valid": true,
+        "duplicate_invoice_signal": false,
+        "purchase_order_match": false,
+        "payment_terms_match": true,
+        "unusual_urgency": false,
+        "location_changed": false,
+        "vendor_contact_verified": false,
+        "callback_verified": null,
+        "supporting_documents_available": true,
+        "amount_deviation_ratio": 2.2,
+        "amount_unusual": true,
+        "supporting_documents_missing": false,
+        "high_risk_signal_count": 3,
+        "multiple_high_risk_signals": true
+      },
+      "beliefs": {
+        "LEGITIMATE": 0.11814938155633936,
+        "ERROR": 0.8477749788288103,
+        "FRAUD": 0.03407563961485035
+      },
+      "action": "VERIFY"
+    },
+    "new_evidence": {
+      "callback_verified": false
+    },
+    "post_feedback": {
+      "evidence": {
+        "case_id": "case-006",
+        "vendor_id": "vendor-004",
+        "vendor_age_days": 30,
+        "existing_vendor": true,
+        "invoice_amount": 1100.0,
+        "historical_average_amount": 500.0,
+        "bank_account_changed": false,
+        "bank_change_age_days": null,
+        "email_domain_changed": false,
+        "lookalike_domain_signal": false,
+        "invoice_number_pattern_valid": true,
+        "duplicate_invoice_signal": false,
+        "purchase_order_match": false,
+        "payment_terms_match": true,
+        "unusual_urgency": false,
+        "location_changed": false,
+        "vendor_contact_verified": false,
+        "callback_verified": false,
+        "supporting_documents_available": true,
+        "amount_deviation_ratio": 2.2,
+        "amount_unusual": true,
+        "supporting_documents_missing": false,
+        "high_risk_signal_count": 3,
+        "multiple_high_risk_signals": true
+      },
+      "beliefs": {
+        "LEGITIMATE": 0.02377066621736661,
+        "ERROR": 0.8528261334810777,
+        "FRAUD": 0.12340320030155577
+      },
+      "action": "HOLD"
+    }
+  },
+  {
+    "case_id": "case-006",
+    "policy": "policy_b",
+    "true_state": "ERROR",
+    "initial": {
+      "evidence": {
+        "case_id": "case-006",
+        "vendor_id": "vendor-004",
+        "vendor_age_days": 30,
+        "existing_vendor": true,
+        "invoice_amount": 1100.0,
+        "historical_average_amount": 500.0,
+        "bank_account_changed": false,
+        "bank_change_age_days": null,
+        "email_domain_changed": false,
+        "lookalike_domain_signal": false,
+        "invoice_number_pattern_valid": true,
+        "duplicate_invoice_signal": false,
+        "purchase_order_match": false,
+        "payment_terms_match": true,
+        "unusual_urgency": false,
+        "location_changed": false,
+        "vendor_contact_verified": false,
+        "callback_verified": null,
+        "supporting_documents_available": true,
+        "amount_deviation_ratio": 2.2,
+        "amount_unusual": true,
+        "supporting_documents_missing": false,
+        "high_risk_signal_count": 3,
+        "multiple_high_risk_signals": true
+      },
+      "beliefs": {
+        "LEGITIMATE": 0.11814938155633936,
+        "ERROR": 0.8477749788288103,
+        "FRAUD": 0.03407563961485035
+      },
+      "action": "VERIFY"
+    },
+    "new_evidence": {
+      "callback_verified": false
+    },
+    "post_feedback": {
+      "evidence": {
+        "case_id": "case-006",
+        "vendor_id": "vendor-004",
+        "vendor_age_days": 30,
+        "existing_vendor": true,
+        "invoice_amount": 1100.0,
+        "historical_average_amount": 500.0,
+        "bank_account_changed": false,
+        "bank_change_age_days": null,
+        "email_domain_changed": false,
+        "lookalike_domain_signal": false,
+        "invoice_number_pattern_valid": true,
+        "duplicate_invoice_signal": false,
+        "purchase_order_match": false,
+        "payment_terms_match": true,
+        "unusual_urgency": false,
+        "location_changed": false,
+        "vendor_contact_verified": false,
+        "callback_verified": false,
+        "supporting_documents_available": true,
+        "amount_deviation_ratio": 2.2,
+        "amount_unusual": true,
+        "supporting_documents_missing": false,
+        "high_risk_signal_count": 3,
+        "multiple_high_risk_signals": true
+      },
+      "beliefs": {
+        "LEGITIMATE": 0.02377066621736661,
+        "ERROR": 0.8528261334810777,
+        "FRAUD": 0.12340320030155577
+      },
+      "action": "HOLD"
+    }
+  },
+  {
     "case_id": "case-008",
-    "policy": "baseline",
+    "policy": "policy_a",
     "true_state": "LEGITIMATE",
     "initial": {
       "evidence": {
@@ -16,19 +320,24 @@
         "email_domain_changed": false,
         "lookalike_domain_signal": false,
         "invoice_number_pattern_valid": true,
-        "duplicate_invoice_signal": false,
+        "duplicate_invoice_signal": true,
         "purchase_order_match": true,
         "payment_terms_match": true,
         "unusual_urgency": false,
         "location_changed": false,
         "vendor_contact_verified": true,
         "callback_verified": null,
-        "supporting_documents_available": true
+        "supporting_documents_available": true,
+        "amount_deviation_ratio": 1.1,
+        "amount_unusual": false,
+        "supporting_documents_missing": false,
+        "high_risk_signal_count": 2,
+        "multiple_high_risk_signals": true
       },
       "beliefs": {
-        "LEGITIMATE": 0.9260840898536158,
-        "ERROR": 0.07350002093170419,
-        "FRAUD": 0.0004158892146800165
+        "LEGITIMATE": 0.18012641419910738,
+        "ERROR": 0.8160484446329324,
+        "FRAUD": 0.0038251411679601677
       },
       "action": "VERIFY"
     },
@@ -55,14 +364,95 @@
         "location_changed": false,
         "vendor_contact_verified": true,
         "callback_verified": true,
-        "supporting_documents_available": true
+        "supporting_documents_available": true,
+        "amount_deviation_ratio": 1.1,
+        "amount_unusual": false,
+        "supporting_documents_missing": false,
+        "high_risk_signal_count": 1,
+        "multiple_high_risk_signals": false
       },
       "beliefs": {
-        "LEGITIMATE": 0.9469013508191996,
-        "ERROR": 0.053048621191856334,
-        "FRAUD": 5.00279889440191e-05
+        "LEGITIMATE": 0.9697118801563358,
+        "ERROR": 0.030287313203937464,
+        "FRAUD": 8.066397266806101e-07
+      },
+      "action": "APPROVE"
+    }
+  },
+  {
+    "case_id": "case-008",
+    "policy": "policy_b",
+    "true_state": "LEGITIMATE",
+    "initial": {
+      "evidence": {
+        "case_id": "case-008",
+        "vendor_id": "vendor-006",
+        "vendor_age_days": 120,
+        "existing_vendor": true,
+        "invoice_amount": 1650.0,
+        "historical_average_amount": 1500.0,
+        "bank_account_changed": true,
+        "bank_change_age_days": 90,
+        "email_domain_changed": false,
+        "lookalike_domain_signal": false,
+        "invoice_number_pattern_valid": true,
+        "duplicate_invoice_signal": true,
+        "purchase_order_match": true,
+        "payment_terms_match": true,
+        "unusual_urgency": false,
+        "location_changed": false,
+        "vendor_contact_verified": true,
+        "callback_verified": null,
+        "supporting_documents_available": true,
+        "amount_deviation_ratio": 1.1,
+        "amount_unusual": false,
+        "supporting_documents_missing": false,
+        "high_risk_signal_count": 2,
+        "multiple_high_risk_signals": true
+      },
+      "beliefs": {
+        "LEGITIMATE": 0.18012641419910738,
+        "ERROR": 0.8160484446329324,
+        "FRAUD": 0.0038251411679601677
       },
       "action": "VERIFY"
+    },
+    "new_evidence": {
+      "callback_verified": true
+    },
+    "post_feedback": {
+      "evidence": {
+        "case_id": "case-008",
+        "vendor_id": "vendor-006",
+        "vendor_age_days": 120,
+        "existing_vendor": true,
+        "invoice_amount": 1650.0,
+        "historical_average_amount": 1500.0,
+        "bank_account_changed": true,
+        "bank_change_age_days": 90,
+        "email_domain_changed": false,
+        "lookalike_domain_signal": false,
+        "invoice_number_pattern_valid": true,
+        "duplicate_invoice_signal": false,
+        "purchase_order_match": true,
+        "payment_terms_match": true,
+        "unusual_urgency": false,
+        "location_changed": false,
+        "vendor_contact_verified": true,
+        "callback_verified": true,
+        "supporting_documents_available": true,
+        "amount_deviation_ratio": 1.1,
+        "amount_unusual": false,
+        "supporting_documents_missing": false,
+        "high_risk_signal_count": 1,
+        "multiple_high_risk_signals": false
+      },
+      "beliefs": {
+        "LEGITIMATE": 0.9697118801563358,
+        "ERROR": 0.030287313203937464,
+        "FRAUD": 8.066397266806101e-07
+      },
+      "action": "APPROVE"
     }
   },
   {
@@ -89,12 +479,17 @@
         "location_changed": false,
         "vendor_contact_verified": false,
         "callback_verified": null,
-        "supporting_documents_available": false
+        "supporting_documents_available": false,
+        "amount_deviation_ratio": 5.0,
+        "amount_unusual": true,
+        "supporting_documents_missing": true,
+        "high_risk_signal_count": 5,
+        "multiple_high_risk_signals": true
       },
       "beliefs": {
-        "LEGITIMATE": 0.4797732792245779,
-        "ERROR": 0.42874736942018643,
-        "FRAUD": 0.09147935135523569
+        "LEGITIMATE": 0.005307505452955177,
+        "ERROR": 0.44821632408349515,
+        "FRAUD": 0.5464761704635496
       },
       "action": "VERIFY"
     },
@@ -121,46 +516,56 @@
         "location_changed": false,
         "vendor_contact_verified": false,
         "callback_verified": false,
-        "supporting_documents_available": false
+        "supporting_documents_available": false,
+        "amount_deviation_ratio": 5.0,
+        "amount_unusual": true,
+        "supporting_documents_missing": true,
+        "high_risk_signal_count": 5,
+        "multiple_high_risk_signals": true
       },
       "beliefs": {
-        "LEGITIMATE": 0.11235543876656033,
-        "ERROR": 0.5020298221804951,
-        "FRAUD": 0.3856147390529446
+        "LEGITIMATE": 0.0004392553950063137,
+        "ERROR": 0.18547455130163976,
+        "FRAUD": 0.814086193303354
       },
       "action": "VERIFY"
     }
   },
   {
-    "case_id": "case-016",
-    "policy": "policy_b",
-    "true_state": "FRAUD",
+    "case_id": "case-014",
+    "policy": "policy_a",
+    "true_state": "ERROR",
     "initial": {
       "evidence": {
-        "case_id": "case-016",
-        "vendor_id": "vendor-012",
-        "vendor_age_days": 2400,
+        "case_id": "case-014",
+        "vendor_id": "vendor-011",
+        "vendor_age_days": 800,
         "existing_vendor": true,
-        "invoice_amount": 4500.0,
+        "invoice_amount": 1980.0,
         "historical_average_amount": 900.0,
         "bank_account_changed": false,
         "bank_change_age_days": null,
         "email_domain_changed": false,
-        "lookalike_domain_signal": true,
+        "lookalike_domain_signal": false,
         "invoice_number_pattern_valid": true,
         "duplicate_invoice_signal": false,
         "purchase_order_match": true,
         "payment_terms_match": true,
-        "unusual_urgency": true,
-        "location_changed": false,
-        "vendor_contact_verified": false,
+        "unusual_urgency": false,
+        "location_changed": true,
+        "vendor_contact_verified": true,
         "callback_verified": null,
-        "supporting_documents_available": false
+        "supporting_documents_available": true,
+        "amount_deviation_ratio": 2.2,
+        "amount_unusual": true,
+        "supporting_documents_missing": false,
+        "high_risk_signal_count": 2,
+        "multiple_high_risk_signals": true
       },
       "beliefs": {
-        "LEGITIMATE": 0.5321707581893352,
-        "ERROR": 0.29502251869490853,
-        "FRAUD": 0.1728067231157561
+        "LEGITIMATE": 0.4905020415178398,
+        "ERROR": 0.5080906367656568,
+        "FRAUD": 0.0014073217165033929
       },
       "action": "VERIFY"
     },
@@ -169,30 +574,567 @@
     },
     "post_feedback": {
       "evidence": {
-        "case_id": "case-016",
-        "vendor_id": "vendor-012",
-        "vendor_age_days": 2400,
+        "case_id": "case-014",
+        "vendor_id": "vendor-011",
+        "vendor_age_days": 800,
         "existing_vendor": true,
-        "invoice_amount": 4500.0,
+        "invoice_amount": 1980.0,
         "historical_average_amount": 900.0,
         "bank_account_changed": false,
         "bank_change_age_days": null,
         "email_domain_changed": false,
-        "lookalike_domain_signal": true,
+        "lookalike_domain_signal": false,
         "invoice_number_pattern_valid": true,
         "duplicate_invoice_signal": false,
         "purchase_order_match": true,
         "payment_terms_match": true,
-        "unusual_urgency": true,
+        "unusual_urgency": false,
+        "location_changed": true,
+        "vendor_contact_verified": true,
+        "callback_verified": false,
+        "supporting_documents_available": true,
+        "amount_deviation_ratio": 2.2,
+        "amount_unusual": true,
+        "supporting_documents_missing": false,
+        "high_risk_signal_count": 2,
+        "multiple_high_risk_signals": true
+      },
+      "beliefs": {
+        "LEGITIMATE": 0.16048952173371772,
+        "ERROR": 0.8312220581138454,
+        "FRAUD": 0.00828842015243684
+      },
+      "action": "VERIFY"
+    }
+  },
+  {
+    "case_id": "case-014",
+    "policy": "policy_b",
+    "true_state": "ERROR",
+    "initial": {
+      "evidence": {
+        "case_id": "case-014",
+        "vendor_id": "vendor-011",
+        "vendor_age_days": 800,
+        "existing_vendor": true,
+        "invoice_amount": 1980.0,
+        "historical_average_amount": 900.0,
+        "bank_account_changed": false,
+        "bank_change_age_days": null,
+        "email_domain_changed": false,
+        "lookalike_domain_signal": false,
+        "invoice_number_pattern_valid": true,
+        "duplicate_invoice_signal": false,
+        "purchase_order_match": true,
+        "payment_terms_match": true,
+        "unusual_urgency": false,
+        "location_changed": true,
+        "vendor_contact_verified": true,
+        "callback_verified": null,
+        "supporting_documents_available": true,
+        "amount_deviation_ratio": 2.2,
+        "amount_unusual": true,
+        "supporting_documents_missing": false,
+        "high_risk_signal_count": 2,
+        "multiple_high_risk_signals": true
+      },
+      "beliefs": {
+        "LEGITIMATE": 0.4905020415178398,
+        "ERROR": 0.5080906367656568,
+        "FRAUD": 0.0014073217165033929
+      },
+      "action": "VERIFY"
+    },
+    "new_evidence": {
+      "callback_verified": false
+    },
+    "post_feedback": {
+      "evidence": {
+        "case_id": "case-014",
+        "vendor_id": "vendor-011",
+        "vendor_age_days": 800,
+        "existing_vendor": true,
+        "invoice_amount": 1980.0,
+        "historical_average_amount": 900.0,
+        "bank_account_changed": false,
+        "bank_change_age_days": null,
+        "email_domain_changed": false,
+        "lookalike_domain_signal": false,
+        "invoice_number_pattern_valid": true,
+        "duplicate_invoice_signal": false,
+        "purchase_order_match": true,
+        "payment_terms_match": true,
+        "unusual_urgency": false,
+        "location_changed": true,
+        "vendor_contact_verified": true,
+        "callback_verified": false,
+        "supporting_documents_available": true,
+        "amount_deviation_ratio": 2.2,
+        "amount_unusual": true,
+        "supporting_documents_missing": false,
+        "high_risk_signal_count": 2,
+        "multiple_high_risk_signals": true
+      },
+      "beliefs": {
+        "LEGITIMATE": 0.16048952173371772,
+        "ERROR": 0.8312220581138454,
+        "FRAUD": 0.00828842015243684
+      },
+      "action": "VERIFY"
+    }
+  },
+  {
+    "case_id": "case-018",
+    "policy": "policy_a",
+    "true_state": "ERROR",
+    "initial": {
+      "evidence": {
+        "case_id": "case-018",
+        "vendor_id": "vendor-004",
+        "vendor_age_days": 120,
+        "existing_vendor": true,
+        "invoice_amount": 3300.0,
+        "historical_average_amount": 1500.0,
+        "bank_account_changed": false,
+        "bank_change_age_days": null,
+        "email_domain_changed": false,
+        "lookalike_domain_signal": false,
+        "invoice_number_pattern_valid": false,
+        "duplicate_invoice_signal": false,
+        "purchase_order_match": true,
+        "payment_terms_match": true,
+        "unusual_urgency": false,
+        "location_changed": false,
+        "vendor_contact_verified": false,
+        "callback_verified": null,
+        "supporting_documents_available": true,
+        "amount_deviation_ratio": 2.2,
+        "amount_unusual": true,
+        "supporting_documents_missing": false,
+        "high_risk_signal_count": 2,
+        "multiple_high_risk_signals": true
+      },
+      "beliefs": {
+        "LEGITIMATE": 0.5044250036970142,
+        "ERROR": 0.4915338305036018,
+        "FRAUD": 0.004041165799384101
+      },
+      "action": "VERIFY"
+    },
+    "new_evidence": {
+      "callback_verified": false
+    },
+    "post_feedback": {
+      "evidence": {
+        "case_id": "case-018",
+        "vendor_id": "vendor-004",
+        "vendor_age_days": 120,
+        "existing_vendor": true,
+        "invoice_amount": 3300.0,
+        "historical_average_amount": 1500.0,
+        "bank_account_changed": false,
+        "bank_change_age_days": null,
+        "email_domain_changed": false,
+        "lookalike_domain_signal": false,
+        "invoice_number_pattern_valid": false,
+        "duplicate_invoice_signal": false,
+        "purchase_order_match": true,
+        "payment_terms_match": true,
+        "unusual_urgency": false,
         "location_changed": false,
         "vendor_contact_verified": false,
         "callback_verified": false,
-        "supporting_documents_available": false
+        "supporting_documents_available": true,
+        "amount_deviation_ratio": 2.2,
+        "amount_unusual": true,
+        "supporting_documents_missing": false,
+        "high_risk_signal_count": 2,
+        "multiple_high_risk_signals": true
       },
       "beliefs": {
-        "LEGITIMATE": 0.10398419321048823,
-        "ERROR": 0.2882315320160993,
-        "FRAUD": 0.6077842747734125
+        "LEGITIMATE": 0.16621166565134501,
+        "ERROR": 0.8098196569679,
+        "FRAUD": 0.023968677380754942
+      },
+      "action": "VERIFY"
+    }
+  },
+  {
+    "case_id": "case-018",
+    "policy": "policy_b",
+    "true_state": "ERROR",
+    "initial": {
+      "evidence": {
+        "case_id": "case-018",
+        "vendor_id": "vendor-004",
+        "vendor_age_days": 120,
+        "existing_vendor": true,
+        "invoice_amount": 3300.0,
+        "historical_average_amount": 1500.0,
+        "bank_account_changed": false,
+        "bank_change_age_days": null,
+        "email_domain_changed": false,
+        "lookalike_domain_signal": false,
+        "invoice_number_pattern_valid": false,
+        "duplicate_invoice_signal": false,
+        "purchase_order_match": true,
+        "payment_terms_match": true,
+        "unusual_urgency": false,
+        "location_changed": false,
+        "vendor_contact_verified": false,
+        "callback_verified": null,
+        "supporting_documents_available": true,
+        "amount_deviation_ratio": 2.2,
+        "amount_unusual": true,
+        "supporting_documents_missing": false,
+        "high_risk_signal_count": 2,
+        "multiple_high_risk_signals": true
+      },
+      "beliefs": {
+        "LEGITIMATE": 0.5044250036970142,
+        "ERROR": 0.4915338305036018,
+        "FRAUD": 0.004041165799384101
+      },
+      "action": "VERIFY"
+    },
+    "new_evidence": {
+      "callback_verified": false
+    },
+    "post_feedback": {
+      "evidence": {
+        "case_id": "case-018",
+        "vendor_id": "vendor-004",
+        "vendor_age_days": 120,
+        "existing_vendor": true,
+        "invoice_amount": 3300.0,
+        "historical_average_amount": 1500.0,
+        "bank_account_changed": false,
+        "bank_change_age_days": null,
+        "email_domain_changed": false,
+        "lookalike_domain_signal": false,
+        "invoice_number_pattern_valid": false,
+        "duplicate_invoice_signal": false,
+        "purchase_order_match": true,
+        "payment_terms_match": true,
+        "unusual_urgency": false,
+        "location_changed": false,
+        "vendor_contact_verified": false,
+        "callback_verified": false,
+        "supporting_documents_available": true,
+        "amount_deviation_ratio": 2.2,
+        "amount_unusual": true,
+        "supporting_documents_missing": false,
+        "high_risk_signal_count": 2,
+        "multiple_high_risk_signals": true
+      },
+      "beliefs": {
+        "LEGITIMATE": 0.16621166565134501,
+        "ERROR": 0.8098196569679,
+        "FRAUD": 0.023968677380754942
+      },
+      "action": "VERIFY"
+    }
+  },
+  {
+    "case_id": "case-020",
+    "policy": "policy_a",
+    "true_state": "ERROR",
+    "initial": {
+      "evidence": {
+        "case_id": "case-020",
+        "vendor_id": "vendor-011",
+        "vendor_age_days": 800,
+        "existing_vendor": true,
+        "invoice_amount": 630.0,
+        "historical_average_amount": 900.0,
+        "bank_account_changed": false,
+        "bank_change_age_days": null,
+        "email_domain_changed": false,
+        "lookalike_domain_signal": false,
+        "invoice_number_pattern_valid": true,
+        "duplicate_invoice_signal": true,
+        "purchase_order_match": true,
+        "payment_terms_match": true,
+        "unusual_urgency": false,
+        "location_changed": false,
+        "vendor_contact_verified": true,
+        "callback_verified": null,
+        "supporting_documents_available": true,
+        "amount_deviation_ratio": 0.7,
+        "amount_unusual": false,
+        "supporting_documents_missing": false,
+        "high_risk_signal_count": 1,
+        "multiple_high_risk_signals": false
+      },
+      "beliefs": {
+        "LEGITIMATE": 0.8355489167414218,
+        "ERROR": 0.16444459802158332,
+        "FRAUD": 6.485236994851994e-06
+      },
+      "action": "VERIFY"
+    },
+    "new_evidence": {
+      "callback_verified": false
+    },
+    "post_feedback": {
+      "evidence": {
+        "case_id": "case-020",
+        "vendor_id": "vendor-011",
+        "vendor_age_days": 800,
+        "existing_vendor": true,
+        "invoice_amount": 630.0,
+        "historical_average_amount": 900.0,
+        "bank_account_changed": false,
+        "bank_change_age_days": null,
+        "email_domain_changed": false,
+        "lookalike_domain_signal": false,
+        "invoice_number_pattern_valid": true,
+        "duplicate_invoice_signal": true,
+        "purchase_order_match": true,
+        "payment_terms_match": true,
+        "unusual_urgency": false,
+        "location_changed": false,
+        "vendor_contact_verified": true,
+        "callback_verified": false,
+        "supporting_documents_available": true,
+        "amount_deviation_ratio": 0.7,
+        "amount_unusual": false,
+        "supporting_documents_missing": false,
+        "high_risk_signal_count": 1,
+        "multiple_high_risk_signals": false
+      },
+      "beliefs": {
+        "LEGITIMATE": 0.5039837393296549,
+        "ERROR": 0.4959458492669417,
+        "FRAUD": 7.041140340331297e-05
+      },
+      "action": "VERIFY"
+    }
+  },
+  {
+    "case_id": "case-020",
+    "policy": "policy_b",
+    "true_state": "ERROR",
+    "initial": {
+      "evidence": {
+        "case_id": "case-020",
+        "vendor_id": "vendor-011",
+        "vendor_age_days": 800,
+        "existing_vendor": true,
+        "invoice_amount": 630.0,
+        "historical_average_amount": 900.0,
+        "bank_account_changed": false,
+        "bank_change_age_days": null,
+        "email_domain_changed": false,
+        "lookalike_domain_signal": false,
+        "invoice_number_pattern_valid": true,
+        "duplicate_invoice_signal": true,
+        "purchase_order_match": true,
+        "payment_terms_match": true,
+        "unusual_urgency": false,
+        "location_changed": false,
+        "vendor_contact_verified": true,
+        "callback_verified": null,
+        "supporting_documents_available": true,
+        "amount_deviation_ratio": 0.7,
+        "amount_unusual": false,
+        "supporting_documents_missing": false,
+        "high_risk_signal_count": 1,
+        "multiple_high_risk_signals": false
+      },
+      "beliefs": {
+        "LEGITIMATE": 0.8355489167414218,
+        "ERROR": 0.16444459802158332,
+        "FRAUD": 6.485236994851994e-06
+      },
+      "action": "VERIFY"
+    },
+    "new_evidence": {
+      "callback_verified": false
+    },
+    "post_feedback": {
+      "evidence": {
+        "case_id": "case-020",
+        "vendor_id": "vendor-011",
+        "vendor_age_days": 800,
+        "existing_vendor": true,
+        "invoice_amount": 630.0,
+        "historical_average_amount": 900.0,
+        "bank_account_changed": false,
+        "bank_change_age_days": null,
+        "email_domain_changed": false,
+        "lookalike_domain_signal": false,
+        "invoice_number_pattern_valid": true,
+        "duplicate_invoice_signal": true,
+        "purchase_order_match": true,
+        "payment_terms_match": true,
+        "unusual_urgency": false,
+        "location_changed": false,
+        "vendor_contact_verified": true,
+        "callback_verified": false,
+        "supporting_documents_available": true,
+        "amount_deviation_ratio": 0.7,
+        "amount_unusual": false,
+        "supporting_documents_missing": false,
+        "high_risk_signal_count": 1,
+        "multiple_high_risk_signals": false
+      },
+      "beliefs": {
+        "LEGITIMATE": 0.5039837393296549,
+        "ERROR": 0.4959458492669417,
+        "FRAUD": 7.041140340331297e-05
+      },
+      "action": "VERIFY"
+    }
+  },
+  {
+    "case_id": "case-021",
+    "policy": "policy_a",
+    "true_state": "ERROR",
+    "initial": {
+      "evidence": {
+        "case_id": "case-021",
+        "vendor_id": "vendor-007",
+        "vendor_age_days": 2400,
+        "existing_vendor": true,
+        "invoice_amount": 6600.0,
+        "historical_average_amount": 3000.0,
+        "bank_account_changed": false,
+        "bank_change_age_days": null,
+        "email_domain_changed": false,
+        "lookalike_domain_signal": false,
+        "invoice_number_pattern_valid": true,
+        "duplicate_invoice_signal": false,
+        "purchase_order_match": false,
+        "payment_terms_match": true,
+        "unusual_urgency": false,
+        "location_changed": false,
+        "vendor_contact_verified": false,
+        "callback_verified": null,
+        "supporting_documents_available": true,
+        "amount_deviation_ratio": 2.2,
+        "amount_unusual": true,
+        "supporting_documents_missing": false,
+        "high_risk_signal_count": 3,
+        "multiple_high_risk_signals": true
+      },
+      "beliefs": {
+        "LEGITIMATE": 0.11814938155633936,
+        "ERROR": 0.8477749788288103,
+        "FRAUD": 0.03407563961485035
+      },
+      "action": "VERIFY"
+    },
+    "new_evidence": {
+      "callback_verified": false
+    },
+    "post_feedback": {
+      "evidence": {
+        "case_id": "case-021",
+        "vendor_id": "vendor-007",
+        "vendor_age_days": 2400,
+        "existing_vendor": true,
+        "invoice_amount": 6600.0,
+        "historical_average_amount": 3000.0,
+        "bank_account_changed": false,
+        "bank_change_age_days": null,
+        "email_domain_changed": false,
+        "lookalike_domain_signal": false,
+        "invoice_number_pattern_valid": true,
+        "duplicate_invoice_signal": false,
+        "purchase_order_match": false,
+        "payment_terms_match": true,
+        "unusual_urgency": false,
+        "location_changed": false,
+        "vendor_contact_verified": false,
+        "callback_verified": false,
+        "supporting_documents_available": true,
+        "amount_deviation_ratio": 2.2,
+        "amount_unusual": true,
+        "supporting_documents_missing": false,
+        "high_risk_signal_count": 3,
+        "multiple_high_risk_signals": true
+      },
+      "beliefs": {
+        "LEGITIMATE": 0.02377066621736661,
+        "ERROR": 0.8528261334810777,
+        "FRAUD": 0.12340320030155577
+      },
+      "action": "HOLD"
+    }
+  },
+  {
+    "case_id": "case-021",
+    "policy": "policy_b",
+    "true_state": "ERROR",
+    "initial": {
+      "evidence": {
+        "case_id": "case-021",
+        "vendor_id": "vendor-007",
+        "vendor_age_days": 2400,
+        "existing_vendor": true,
+        "invoice_amount": 6600.0,
+        "historical_average_amount": 3000.0,
+        "bank_account_changed": false,
+        "bank_change_age_days": null,
+        "email_domain_changed": false,
+        "lookalike_domain_signal": false,
+        "invoice_number_pattern_valid": true,
+        "duplicate_invoice_signal": false,
+        "purchase_order_match": false,
+        "payment_terms_match": true,
+        "unusual_urgency": false,
+        "location_changed": false,
+        "vendor_contact_verified": false,
+        "callback_verified": null,
+        "supporting_documents_available": true,
+        "amount_deviation_ratio": 2.2,
+        "amount_unusual": true,
+        "supporting_documents_missing": false,
+        "high_risk_signal_count": 3,
+        "multiple_high_risk_signals": true
+      },
+      "beliefs": {
+        "LEGITIMATE": 0.11814938155633936,
+        "ERROR": 0.8477749788288103,
+        "FRAUD": 0.03407563961485035
+      },
+      "action": "VERIFY"
+    },
+    "new_evidence": {
+      "callback_verified": false
+    },
+    "post_feedback": {
+      "evidence": {
+        "case_id": "case-021",
+        "vendor_id": "vendor-007",
+        "vendor_age_days": 2400,
+        "existing_vendor": true,
+        "invoice_amount": 6600.0,
+        "historical_average_amount": 3000.0,
+        "bank_account_changed": false,
+        "bank_change_age_days": null,
+        "email_domain_changed": false,
+        "lookalike_domain_signal": false,
+        "invoice_number_pattern_valid": true,
+        "duplicate_invoice_signal": false,
+        "purchase_order_match": false,
+        "payment_terms_match": true,
+        "unusual_urgency": false,
+        "location_changed": false,
+        "vendor_contact_verified": false,
+        "callback_verified": false,
+        "supporting_documents_available": true,
+        "amount_deviation_ratio": 2.2,
+        "amount_unusual": true,
+        "supporting_documents_missing": false,
+        "high_risk_signal_count": 3,
+        "multiple_high_risk_signals": true
+      },
+      "beliefs": {
+        "LEGITIMATE": 0.02377066621736661,
+        "ERROR": 0.8528261334810777,
+        "FRAUD": 0.12340320030155577
       },
       "action": "HOLD"
     }
@@ -221,12 +1163,17 @@
         "location_changed": false,
         "vendor_contact_verified": false,
         "callback_verified": null,
-        "supporting_documents_available": false
+        "supporting_documents_available": false,
+        "amount_deviation_ratio": 5.0,
+        "amount_unusual": true,
+        "supporting_documents_missing": true,
+        "high_risk_signal_count": 4,
+        "multiple_high_risk_signals": true
       },
       "beliefs": {
-        "LEGITIMATE": 0.7233836227359742,
-        "ERROR": 0.2661847697063164,
-        "FRAUD": 0.01043160755770936
+        "LEGITIMATE": 0.022956606670373775,
+        "ERROR": 0.7982777643849188,
+        "FRAUD": 0.1787656289447074
       },
       "action": "VERIFY"
     },
@@ -253,12 +1200,169 @@
         "location_changed": false,
         "vendor_contact_verified": false,
         "callback_verified": false,
-        "supporting_documents_available": false
+        "supporting_documents_available": false,
+        "amount_deviation_ratio": 5.0,
+        "amount_unusual": true,
+        "supporting_documents_missing": true,
+        "high_risk_signal_count": 4,
+        "multiple_high_risk_signals": true
       },
       "beliefs": {
-        "LEGITIMATE": 0.32264004044583916,
-        "ERROR": 0.5936121731598702,
-        "FRAUD": 0.08374778639429058
+        "LEGITIMATE": 0.003174253917997832,
+        "ERROR": 0.551896967533861,
+        "FRAUD": 0.4449287785481411
+      },
+      "action": "VERIFY"
+    }
+  },
+  {
+    "case_id": "case-025",
+    "policy": "policy_a",
+    "true_state": "ERROR",
+    "initial": {
+      "evidence": {
+        "case_id": "case-025",
+        "vendor_id": "vendor-008",
+        "vendor_age_days": 30,
+        "existing_vendor": true,
+        "invoice_amount": 1620.0,
+        "historical_average_amount": 900.0,
+        "bank_account_changed": false,
+        "bank_change_age_days": null,
+        "email_domain_changed": false,
+        "lookalike_domain_signal": false,
+        "invoice_number_pattern_valid": true,
+        "duplicate_invoice_signal": true,
+        "purchase_order_match": true,
+        "payment_terms_match": true,
+        "unusual_urgency": false,
+        "location_changed": false,
+        "vendor_contact_verified": true,
+        "callback_verified": null,
+        "supporting_documents_available": true,
+        "amount_deviation_ratio": 1.8,
+        "amount_unusual": false,
+        "supporting_documents_missing": false,
+        "high_risk_signal_count": 1,
+        "multiple_high_risk_signals": false
+      },
+      "beliefs": {
+        "LEGITIMATE": 0.8355489167414218,
+        "ERROR": 0.16444459802158332,
+        "FRAUD": 6.485236994851994e-06
+      },
+      "action": "VERIFY"
+    },
+    "new_evidence": {
+      "callback_verified": false
+    },
+    "post_feedback": {
+      "evidence": {
+        "case_id": "case-025",
+        "vendor_id": "vendor-008",
+        "vendor_age_days": 30,
+        "existing_vendor": true,
+        "invoice_amount": 1620.0,
+        "historical_average_amount": 900.0,
+        "bank_account_changed": false,
+        "bank_change_age_days": null,
+        "email_domain_changed": false,
+        "lookalike_domain_signal": false,
+        "invoice_number_pattern_valid": true,
+        "duplicate_invoice_signal": true,
+        "purchase_order_match": true,
+        "payment_terms_match": true,
+        "unusual_urgency": false,
+        "location_changed": false,
+        "vendor_contact_verified": true,
+        "callback_verified": false,
+        "supporting_documents_available": true,
+        "amount_deviation_ratio": 1.8,
+        "amount_unusual": false,
+        "supporting_documents_missing": false,
+        "high_risk_signal_count": 1,
+        "multiple_high_risk_signals": false
+      },
+      "beliefs": {
+        "LEGITIMATE": 0.5039837393296549,
+        "ERROR": 0.4959458492669417,
+        "FRAUD": 7.041140340331297e-05
+      },
+      "action": "VERIFY"
+    }
+  },
+  {
+    "case_id": "case-025",
+    "policy": "policy_b",
+    "true_state": "ERROR",
+    "initial": {
+      "evidence": {
+        "case_id": "case-025",
+        "vendor_id": "vendor-008",
+        "vendor_age_days": 30,
+        "existing_vendor": true,
+        "invoice_amount": 1620.0,
+        "historical_average_amount": 900.0,
+        "bank_account_changed": false,
+        "bank_change_age_days": null,
+        "email_domain_changed": false,
+        "lookalike_domain_signal": false,
+        "invoice_number_pattern_valid": true,
+        "duplicate_invoice_signal": true,
+        "purchase_order_match": true,
+        "payment_terms_match": true,
+        "unusual_urgency": false,
+        "location_changed": false,
+        "vendor_contact_verified": true,
+        "callback_verified": null,
+        "supporting_documents_available": true,
+        "amount_deviation_ratio": 1.8,
+        "amount_unusual": false,
+        "supporting_documents_missing": false,
+        "high_risk_signal_count": 1,
+        "multiple_high_risk_signals": false
+      },
+      "beliefs": {
+        "LEGITIMATE": 0.8355489167414218,
+        "ERROR": 0.16444459802158332,
+        "FRAUD": 6.485236994851994e-06
+      },
+      "action": "VERIFY"
+    },
+    "new_evidence": {
+      "callback_verified": false
+    },
+    "post_feedback": {
+      "evidence": {
+        "case_id": "case-025",
+        "vendor_id": "vendor-008",
+        "vendor_age_days": 30,
+        "existing_vendor": true,
+        "invoice_amount": 1620.0,
+        "historical_average_amount": 900.0,
+        "bank_account_changed": false,
+        "bank_change_age_days": null,
+        "email_domain_changed": false,
+        "lookalike_domain_signal": false,
+        "invoice_number_pattern_valid": true,
+        "duplicate_invoice_signal": true,
+        "purchase_order_match": true,
+        "payment_terms_match": true,
+        "unusual_urgency": false,
+        "location_changed": false,
+        "vendor_contact_verified": true,
+        "callback_verified": false,
+        "supporting_documents_available": true,
+        "amount_deviation_ratio": 1.8,
+        "amount_unusual": false,
+        "supporting_documents_missing": false,
+        "high_risk_signal_count": 1,
+        "multiple_high_risk_signals": false
+      },
+      "beliefs": {
+        "LEGITIMATE": 0.5039837393296549,
+        "ERROR": 0.4959458492669417,
+        "FRAUD": 7.041140340331297e-05
       },
       "action": "VERIFY"
     }
@@ -287,12 +1391,17 @@
         "location_changed": false,
         "vendor_contact_verified": false,
         "callback_verified": null,
-        "supporting_documents_available": false
+        "supporting_documents_available": false,
+        "amount_deviation_ratio": 2.0,
+        "amount_unusual": true,
+        "supporting_documents_missing": true,
+        "high_risk_signal_count": 4,
+        "multiple_high_risk_signals": true
       },
       "beliefs": {
-        "LEGITIMATE": 0.7233836227359742,
-        "ERROR": 0.2661847697063164,
-        "FRAUD": 0.01043160755770936
+        "LEGITIMATE": 0.022956606670373775,
+        "ERROR": 0.7982777643849188,
+        "FRAUD": 0.1787656289447074
       },
       "action": "VERIFY"
     },
@@ -319,46 +1428,56 @@
         "location_changed": false,
         "vendor_contact_verified": false,
         "callback_verified": false,
-        "supporting_documents_available": false
+        "supporting_documents_available": false,
+        "amount_deviation_ratio": 2.0,
+        "amount_unusual": true,
+        "supporting_documents_missing": true,
+        "high_risk_signal_count": 4,
+        "multiple_high_risk_signals": true
       },
       "beliefs": {
-        "LEGITIMATE": 0.32264004044583916,
-        "ERROR": 0.5936121731598702,
-        "FRAUD": 0.08374778639429058
+        "LEGITIMATE": 0.003174253917997832,
+        "ERROR": 0.551896967533861,
+        "FRAUD": 0.4449287785481411
       },
       "action": "VERIFY"
     }
   },
   {
-    "case_id": "case-031",
-    "policy": "policy_b",
-    "true_state": "FRAUD",
+    "case_id": "case-032",
+    "policy": "policy_a",
+    "true_state": "ERROR",
     "initial": {
       "evidence": {
-        "case_id": "case-031",
-        "vendor_id": "vendor-004",
-        "vendor_age_days": 2400,
+        "case_id": "case-032",
+        "vendor_id": "vendor-012",
+        "vendor_age_days": 800,
         "existing_vendor": true,
-        "invoice_amount": 1000.0,
+        "invoice_amount": 350.0,
         "historical_average_amount": 500.0,
         "bank_account_changed": false,
         "bank_change_age_days": null,
         "email_domain_changed": false,
-        "lookalike_domain_signal": true,
+        "lookalike_domain_signal": false,
         "invoice_number_pattern_valid": true,
         "duplicate_invoice_signal": false,
         "purchase_order_match": true,
-        "payment_terms_match": true,
+        "payment_terms_match": false,
         "unusual_urgency": true,
         "location_changed": false,
-        "vendor_contact_verified": false,
+        "vendor_contact_verified": true,
         "callback_verified": null,
-        "supporting_documents_available": false
+        "supporting_documents_available": true,
+        "amount_deviation_ratio": 0.7,
+        "amount_unusual": false,
+        "supporting_documents_missing": false,
+        "high_risk_signal_count": 2,
+        "multiple_high_risk_signals": true
       },
       "beliefs": {
-        "LEGITIMATE": 0.5321707581893352,
-        "ERROR": 0.29502251869490853,
-        "FRAUD": 0.1728067231157561
+        "LEGITIMATE": 0.5598829231428681,
+        "ERROR": 0.43707085407358204,
+        "FRAUD": 0.003046222783549788
       },
       "action": "VERIFY"
     },
@@ -367,32 +1486,113 @@
     },
     "post_feedback": {
       "evidence": {
-        "case_id": "case-031",
-        "vendor_id": "vendor-004",
-        "vendor_age_days": 2400,
+        "case_id": "case-032",
+        "vendor_id": "vendor-012",
+        "vendor_age_days": 800,
         "existing_vendor": true,
-        "invoice_amount": 1000.0,
+        "invoice_amount": 350.0,
         "historical_average_amount": 500.0,
         "bank_account_changed": false,
         "bank_change_age_days": null,
         "email_domain_changed": false,
-        "lookalike_domain_signal": true,
+        "lookalike_domain_signal": false,
         "invoice_number_pattern_valid": true,
         "duplicate_invoice_signal": false,
         "purchase_order_match": true,
-        "payment_terms_match": true,
+        "payment_terms_match": false,
         "unusual_urgency": true,
         "location_changed": false,
-        "vendor_contact_verified": false,
+        "vendor_contact_verified": true,
         "callback_verified": false,
-        "supporting_documents_available": false
+        "supporting_documents_available": true,
+        "amount_deviation_ratio": 0.7,
+        "amount_unusual": false,
+        "supporting_documents_missing": false,
+        "high_risk_signal_count": 2,
+        "multiple_high_risk_signals": true
       },
       "beliefs": {
-        "LEGITIMATE": 0.10398419321048823,
-        "ERROR": 0.2882315320160993,
-        "FRAUD": 0.6077842747734125
+        "LEGITIMATE": 0.19995324487698454,
+        "ERROR": 0.7804643783613582,
+        "FRAUD": 0.01958237676165727
       },
-      "action": "HOLD"
+      "action": "VERIFY"
+    }
+  },
+  {
+    "case_id": "case-032",
+    "policy": "policy_b",
+    "true_state": "ERROR",
+    "initial": {
+      "evidence": {
+        "case_id": "case-032",
+        "vendor_id": "vendor-012",
+        "vendor_age_days": 800,
+        "existing_vendor": true,
+        "invoice_amount": 350.0,
+        "historical_average_amount": 500.0,
+        "bank_account_changed": false,
+        "bank_change_age_days": null,
+        "email_domain_changed": false,
+        "lookalike_domain_signal": false,
+        "invoice_number_pattern_valid": true,
+        "duplicate_invoice_signal": false,
+        "purchase_order_match": true,
+        "payment_terms_match": false,
+        "unusual_urgency": true,
+        "location_changed": false,
+        "vendor_contact_verified": true,
+        "callback_verified": null,
+        "supporting_documents_available": true,
+        "amount_deviation_ratio": 0.7,
+        "amount_unusual": false,
+        "supporting_documents_missing": false,
+        "high_risk_signal_count": 2,
+        "multiple_high_risk_signals": true
+      },
+      "beliefs": {
+        "LEGITIMATE": 0.5598829231428681,
+        "ERROR": 0.43707085407358204,
+        "FRAUD": 0.003046222783549788
+      },
+      "action": "VERIFY"
+    },
+    "new_evidence": {
+      "callback_verified": false
+    },
+    "post_feedback": {
+      "evidence": {
+        "case_id": "case-032",
+        "vendor_id": "vendor-012",
+        "vendor_age_days": 800,
+        "existing_vendor": true,
+        "invoice_amount": 350.0,
+        "historical_average_amount": 500.0,
+        "bank_account_changed": false,
+        "bank_change_age_days": null,
+        "email_domain_changed": false,
+        "lookalike_domain_signal": false,
+        "invoice_number_pattern_valid": true,
+        "duplicate_invoice_signal": false,
+        "purchase_order_match": true,
+        "payment_terms_match": false,
+        "unusual_urgency": true,
+        "location_changed": false,
+        "vendor_contact_verified": true,
+        "callback_verified": false,
+        "supporting_documents_available": true,
+        "amount_deviation_ratio": 0.7,
+        "amount_unusual": false,
+        "supporting_documents_missing": false,
+        "high_risk_signal_count": 2,
+        "multiple_high_risk_signals": true
+      },
+      "beliefs": {
+        "LEGITIMATE": 0.19995324487698454,
+        "ERROR": 0.7804643783613582,
+        "FRAUD": 0.01958237676165727
+      },
+      "action": "VERIFY"
     }
   },
   {
@@ -419,12 +1619,17 @@
         "location_changed": false,
         "vendor_contact_verified": true,
         "callback_verified": null,
-        "supporting_documents_available": true
+        "supporting_documents_available": true,
+        "amount_deviation_ratio": 1.3,
+        "amount_unusual": false,
+        "supporting_documents_missing": false,
+        "high_risk_signal_count": 1,
+        "multiple_high_risk_signals": false
       },
       "beliefs": {
-        "LEGITIMATE": 0.9260840898536158,
-        "ERROR": 0.07350002093170419,
-        "FRAUD": 0.0004158892146800165
+        "LEGITIMATE": 0.957621181469224,
+        "ERROR": 0.04237204758150432,
+        "FRAUD": 6.7709492717100545e-06
       },
       "action": "VERIFY"
     },
@@ -451,12 +1656,17 @@
         "location_changed": false,
         "vendor_contact_verified": true,
         "callback_verified": true,
-        "supporting_documents_available": true
+        "supporting_documents_available": true,
+        "amount_deviation_ratio": 1.3,
+        "amount_unusual": false,
+        "supporting_documents_missing": false,
+        "high_risk_signal_count": 1,
+        "multiple_high_risk_signals": false
       },
       "beliefs": {
-        "LEGITIMATE": 0.9469013508191996,
-        "ERROR": 0.053048621191856334,
-        "FRAUD": 5.00279889440191e-05
+        "LEGITIMATE": 0.9697118801563358,
+        "ERROR": 0.030287313203937464,
+        "FRAUD": 8.066397266806101e-07
       },
       "action": "VERIFY"
     }
@@ -485,12 +1695,17 @@
         "location_changed": false,
         "vendor_contact_verified": true,
         "callback_verified": true,
-        "supporting_documents_available": true
+        "supporting_documents_available": true,
+        "amount_deviation_ratio": 1.0,
+        "amount_unusual": false,
+        "supporting_documents_missing": false,
+        "high_risk_signal_count": 1,
+        "multiple_high_risk_signals": false
       },
       "beliefs": {
-        "LEGITIMATE": 0.9469013508191996,
-        "ERROR": 0.053048621191856334,
-        "FRAUD": 5.00279889440191e-05
+        "LEGITIMATE": 0.9697118801563358,
+        "ERROR": 0.030287313203937464,
+        "FRAUD": 8.066397266806101e-07
       },
       "action": "VERIFY"
     },
@@ -517,12 +1732,17 @@
         "location_changed": false,
         "vendor_contact_verified": true,
         "callback_verified": true,
-        "supporting_documents_available": true
+        "supporting_documents_available": true,
+        "amount_deviation_ratio": 1.0,
+        "amount_unusual": false,
+        "supporting_documents_missing": false,
+        "high_risk_signal_count": 1,
+        "multiple_high_risk_signals": false
       },
       "beliefs": {
-        "LEGITIMATE": 0.9469013508191996,
-        "ERROR": 0.053048621191856334,
-        "FRAUD": 5.00279889440191e-05
+        "LEGITIMATE": 0.9697118801563358,
+        "ERROR": 0.030287313203937464,
+        "FRAUD": 8.066397266806101e-07
       },
       "action": "VERIFY"
     }
