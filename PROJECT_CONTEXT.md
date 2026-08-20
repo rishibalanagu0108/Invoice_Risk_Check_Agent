@@ -66,11 +66,14 @@ Completed:
 - Added an experiment runner for the baseline, Policy A, and Policy B.
 - Generated 120 decision records from the 40 cases and saved JSON/CSV result
   outputs under `results/`.
+- Added policy-level metrics, action rates, review rate, state/action
+  confusion matrices, fraud-protective precision/recall, and cost summaries.
 
 Not completed:
 
 - Probability model and configurable assumptions.
 - Metrics, failure analysis, and figures.
+- Feedback-loop experiment.
 - Configuration file for priors, likelihoods, costs, and thresholds.
 - Synthetic 40-case dataset.
 - Experiment runner and result files.
@@ -88,8 +91,20 @@ Verification note:
 - Python source compilation succeeds.
 - The virtual environment contains the development dependencies.
 - `python -m pytest` passes: 23 tests passed.
-- The experiment runner saves generated outputs to `results/`; generated result
-  files are ignored by Git and must be regenerated from the recorded command.
+- `python -m pytest` passes: 26 tests passed.
+- The experiment runner saves generated outputs to `results/`. These generated
+  result files are currently untracked and can either be committed as the
+  executed run artifact or regenerated from the recorded commands.
+
+Initial metrics observation from the executed simulation:
+
+- Baseline: total cost 520, fraud recall 0.583, human-review rate 0.275.
+- Policy A: total cost 1500, fraud recall 0.0, human-review rate 0.0.
+- Policy B: total cost 1320, fraud recall 0.0, human-review rate 0.0.
+
+This indicates that the current likelihood assumptions produce fraud beliefs
+below the policy thresholds for the generated fraud cases. It is an actual
+observed model/design failure to analyze, not a final real-world claim.
 
 ## Core architecture
 
@@ -145,8 +160,8 @@ experiment.
 
 ## Immediate next action
 
-Implement the metrics layer for action rates, fraud detection, confusion
-matrices, and total/average decision cost.
+Implement the verification feedback loop, then use the recorded metrics and
+observed policy failure for failure analysis.
 
 ## Expected future top-level structure
 
