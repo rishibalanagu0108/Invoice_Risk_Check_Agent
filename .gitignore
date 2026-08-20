@@ -8,7 +8,7 @@ build/
 *.egg-info/
 
 # Generated experiment outputs
-results/*.json
-results/*.csv
+# results/*.json
+# results/*.csv
 results/*.png
 results/*.html

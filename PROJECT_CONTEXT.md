@@ -63,11 +63,14 @@ Completed:
 - Saved canonical `data/cases.csv` with 16 legitimate, 12 error, and 12 fraud
   cases.
 - Added CSV type conversion and round-trip validation.
+- Added an experiment runner for the baseline, Policy A, and Policy B.
+- Generated 120 decision records from the 40 cases and saved JSON/CSV result
+  outputs under `results/`.
 
 Not completed:
 
 - Probability model and configurable assumptions.
-- Experiment runner and result files.
+- Metrics, failure analysis, and figures.
 - Configuration file for priors, likelihoods, costs, and thresholds.
 - Synthetic 40-case dataset.
 - Experiment runner and result files.
@@ -84,7 +87,9 @@ Verification note:
 - `python3 -m invoice_agent` succeeds with `PYTHONPATH=src`.
 - Python source compilation succeeds.
 - The virtual environment contains the development dependencies.
-- `python -m pytest` passes: 20 tests passed.
+- `python -m pytest` passes: 23 tests passed.
+- The experiment runner saves generated outputs to `results/`; generated result
+  files are ignored by Git and must be regenerated from the recorded command.
 
 ## Core architecture
 
@@ -140,8 +145,8 @@ experiment.
 
 ## Immediate next action
 
-Implement the experiment runner that evaluates the baseline, Policy A, and
-Policy B against `data/cases.csv`.
+Implement the metrics layer for action rates, fraud detection, confusion
+matrices, and total/average decision cost.
 
 ## Expected future top-level structure
 
