@@ -82,6 +82,26 @@ class InvoiceCase:
 
         data = asdict(self)
         data.pop("true_state")
+        data["amount_deviation_ratio"] = self.amount_deviation_ratio
+        data["amount_unusual"] = self.amount_deviation_ratio >= 2.0
+        data["supporting_documents_missing"] = not self.supporting_documents_available
+        risk_signal_count = sum(
+            [
+                self.bank_account_changed,
+                self.email_domain_changed,
+                self.lookalike_domain_signal,
+                self.duplicate_invoice_signal,
+                self.unusual_urgency,
+                self.location_changed,
+                not self.purchase_order_match,
+                not self.payment_terms_match,
+                not self.vendor_contact_verified,
+                not self.supporting_documents_available,
+                self.amount_deviation_ratio >= 2.0,
+            ]
+        )
+        data["high_risk_signal_count"] = risk_signal_count
+        data["multiple_high_risk_signals"] = risk_signal_count >= 2
         return data
 
     def to_dict(self) -> dict[str, Any]:

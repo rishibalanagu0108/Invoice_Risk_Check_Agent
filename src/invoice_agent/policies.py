@@ -58,6 +58,7 @@ def policy_action(
     beliefs: Beliefs,
     config: Mapping[str, Any],
     policy_name: str,
+    evidence: Mapping[str, Any] | None = None,
 ) -> Action:
     """Choose an action using fraud thresholds and expected costs.
 
@@ -69,6 +70,16 @@ def policy_action(
     thresholds = _policy_thresholds(config, policy_name)
     fraud_probability = beliefs[HiddenState.FRAUD]
     costs = config["costs"]
+
+    # Safety gate: direct approval is not allowed when the evidence contains
+    # an explicit duplicate or multiple simultaneous high-risk signals.
+    if evidence and (
+        evidence.get("duplicate_invoice_signal")
+        or evidence.get("multiple_high_risk_signals")
+    ):
+        return lowest_cost_action(
+            beliefs, costs, (Action.VERIFY, Action.HOLD, Action.ESCALATE)
+        )
 
     if fraud_probability >= thresholds["escalate_fraud_probability"]:
         allowed = (Action.HOLD, Action.ESCALATE)
@@ -82,13 +93,21 @@ def policy_action(
     return lowest_cost_action(beliefs, costs, allowed)
 
 
-def policy_a_action(beliefs: Beliefs, config: Mapping[str, Any]) -> Action:
+def policy_a_action(
+    beliefs: Beliefs,
+    config: Mapping[str, Any],
+    evidence: Mapping[str, Any] | None = None,
+) -> Action:
     """Efficiency-oriented policy with higher risk thresholds."""
 
-    return policy_action(beliefs, config, "efficiency")
+    return policy_action(beliefs, config, "efficiency", evidence)
 
 
-def policy_b_action(beliefs: Beliefs, config: Mapping[str, Any]) -> Action:
+def policy_b_action(
+    beliefs: Beliefs,
+    config: Mapping[str, Any],
+    evidence: Mapping[str, Any] | None = None,
+) -> Action:
     """Risk-sensitive policy with lower risk thresholds."""
 
-    return policy_action(beliefs, config, "risk_sensitive")
+    return policy_action(beliefs, config, "risk_sensitive", evidence)

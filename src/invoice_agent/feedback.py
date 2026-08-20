@@ -37,9 +37,9 @@ def _decide(
     if policy == "baseline":
         action = baseline_action(case)
     elif policy == "policy_a":
-        action = policy_a_action(beliefs, config)
+        action = policy_a_action(beliefs, config, evidence)
     elif policy == "policy_b":
-        action = policy_b_action(beliefs, config)
+        action = policy_b_action(beliefs, config, evidence)
     else:
         raise ValueError(f"unknown policy: {policy}")
     return {

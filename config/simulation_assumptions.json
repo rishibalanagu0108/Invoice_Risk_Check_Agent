@@ -18,8 +18,8 @@
       "false": {"LEGITIMATE": 0.97, "ERROR": 0.93, "FRAUD": 0.35}
     },
     "duplicate_invoice_signal": {
-      "true": {"LEGITIMATE": 0.03, "ERROR": 0.6, "FRAUD": 0.35},
-      "false": {"LEGITIMATE": 0.97, "ERROR": 0.4, "FRAUD": 0.65}
+      "true": {"LEGITIMATE": 0.03, "ERROR": 0.4, "FRAUD": 0.55},
+      "false": {"LEGITIMATE": 0.97, "ERROR": 0.6, "FRAUD": 0.45}
     },
     "unusual_urgency": {
       "true": {"LEGITIMATE": 0.1, "ERROR": 0.25, "FRAUD": 0.6},
@@ -45,6 +45,18 @@
       "true": {"LEGITIMATE": 0.85, "ERROR": 0.6, "FRAUD": 0.1},
       "false": {"LEGITIMATE": 0.05, "ERROR": 0.25, "FRAUD": 0.9},
       "null": {"LEGITIMATE": 1.0, "ERROR": 1.0, "FRAUD": 1.0}
+    },
+    "amount_unusual": {
+      "true": {"LEGITIMATE": 0.1, "ERROR": 0.35, "FRAUD": 0.65},
+      "false": {"LEGITIMATE": 0.9, "ERROR": 0.65, "FRAUD": 0.35}
+    },
+    "supporting_documents_missing": {
+      "true": {"LEGITIMATE": 0.1, "ERROR": 0.45, "FRAUD": 0.75},
+      "false": {"LEGITIMATE": 0.9, "ERROR": 0.55, "FRAUD": 0.25}
+    },
+    "multiple_high_risk_signals": {
+      "true": {"LEGITIMATE": 0.05, "ERROR": 0.2, "FRAUD": 0.8},
+      "false": {"LEGITIMATE": 0.95, "ERROR": 0.8, "FRAUD": 0.2}
     }
   },
   "costs": {

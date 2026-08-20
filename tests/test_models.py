@@ -51,6 +51,20 @@ def test_observation_excludes_true_state() -> None:
     assert case.to_dict()["true_state"] == HiddenState.LEGITIMATE
 
 
+def test_observation_contains_derived_risk_evidence() -> None:
+    case = make_case(
+        invoice_amount=2500.0,
+        historical_average_amount=1000.0,
+        supporting_documents_available=False,
+        unusual_urgency=True,
+    )
+
+    observation = case.observation()
+    assert observation["amount_unusual"] is True
+    assert observation["supporting_documents_missing"] is True
+    assert observation["multiple_high_risk_signals"] is True
+
+
 def test_amount_deviation_ratio() -> None:
     assert make_case(invoice_amount=1800.0).amount_deviation_ratio == 2.0
 

@@ -76,19 +76,15 @@ Completed:
 - Added failure analysis generated from executed experiment output.
 - Identified 5 highest-cost incorrect decisions; the highest observed cost was
   100 for approving fraud in `case-004` (tied by other fraud approvals).
+- Applied Model Revision 001 using the failure findings: derived risk evidence,
+  revised duplicate likelihoods, and safety gates for duplicate/multiple-risk
+  cases.
+- Re-ran the experiment, metrics, and failure analysis after the revision.
 
 Not completed:
 
-- Probability model and configurable assumptions.
-- Metrics, failure analysis, and figures.
-- Feedback-loop experiment.
 - Probability decision record.
-- Configuration file for priors, likelihoods, costs, and thresholds.
-- Synthetic 40-case dataset.
-- Experiment runner and result files.
-- Metrics, failure analysis, and figures.
-- Additional automated tests for feedback,
-  experiments, and metrics.
+- Figures.
 - README and research documentation.
 - IJCAI-style preprint.
 - Genuine Reddit/X discussions and AI reviews.
@@ -99,9 +95,7 @@ Verification note:
 - `python3 -m invoice_agent` succeeds with `PYTHONPATH=src`.
 - Python source compilation succeeds.
 - The virtual environment contains the development dependencies.
-- `python -m pytest` passes: 23 tests passed.
-- `python -m pytest` passes: 26 tests passed.
-- `python -m pytest` passes: 31 tests passed.
+- `python -m pytest` passes: 33 tests passed.
 - The experiment runner saves generated outputs to `results/`. These generated
   result files are currently untracked and can either be committed as the
   executed run artifact or regenerated from the recorded commands.
@@ -115,6 +109,15 @@ Initial metrics observation from the executed simulation:
 This indicates that the current likelihood assumptions produce fraud beliefs
 below the policy thresholds for the generated fraud cases. It is an actual
 observed model/design failure to analyze, not a final real-world claim.
+
+Post-revision metrics from the executed simulation:
+
+- Baseline: total cost 520, fraud recall 0.583, human-review rate 0.275.
+- Policy A: total cost 224, fraud recall 1.0, human-review rate 0.3.
+- Policy B: total cost 224, fraud recall 1.0, human-review rate 0.3.
+
+The revision improved the simulated policy results, but these remain
+assumption-dependent synthetic findings and require sensitivity analysis.
 
 ## Core architecture
 

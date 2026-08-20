@@ -26,11 +26,13 @@ def _baseline_policy(case: InvoiceCase, _: Mapping[str, Any]) -> Action:
 
 
 def _belief_policy_a(case: InvoiceCase, config: Mapping[str, Any]) -> Action:
-    return policy_a_action(calculate_beliefs(case.observation(), config), config)
+    evidence = case.observation()
+    return policy_a_action(calculate_beliefs(evidence, config), config, evidence)
 
 
 def _belief_policy_b(case: InvoiceCase, config: Mapping[str, Any]) -> Action:
-    return policy_b_action(calculate_beliefs(case.observation(), config), config)
+    evidence = case.observation()
+    return policy_b_action(calculate_beliefs(evidence, config), config, evidence)
 
 
 POLICIES: dict[str, PolicyFunction] = {

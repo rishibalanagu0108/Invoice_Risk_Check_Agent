@@ -86,3 +86,18 @@ def test_high_fraud_probability_requires_escalation_or_hold(config: dict) -> Non
 
     assert policy_a_action(beliefs, config) in {Action.HOLD, Action.ESCALATE}
     assert policy_b_action(beliefs, config) in {Action.HOLD, Action.ESCALATE}
+
+
+def test_high_risk_evidence_blocks_direct_approval(config: dict) -> None:
+    beliefs = {
+        HiddenState.LEGITIMATE: 0.8,
+        HiddenState.ERROR: 0.15,
+        HiddenState.FRAUD: 0.05,
+    }
+    evidence = {
+        "duplicate_invoice_signal": True,
+        "multiple_high_risk_signals": True,
+    }
+
+    assert policy_a_action(beliefs, config, evidence) != Action.APPROVE
+    assert policy_b_action(beliefs, config, evidence) != Action.APPROVE
